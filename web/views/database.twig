@@ -4,10 +4,10 @@
 <p>Got these rows from the database:</p>
 
 <ul>
-{% for n in names %}
-  <li> {{ n.name }} </li>
+{% for i in ingredients %}
+  <li> {{ i.ingredient }} </li>
 {% else %}
-  <li>Nameless!</li>
+  <li>No Ingredients Found</li>
 {% endfor %}
 </ul>
 

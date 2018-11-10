@@ -44,17 +44,16 @@ $app->get('/', function() use($app) {
 
 
 $app->get('/db/', function() use($app) {
-  $st = $app['pdo']->prepare('SELECT name FROM test_table');
+  $st = $app['pdo']->prepare('SELECT ingredient FROM ingredients');
   $st->execute();
 
-  $names = array();
+  $ingredient = array();
   while ($row = $st->fetch(PDO::FETCH_ASSOC)) {
-    $app['monolog']->addDebug('Row ' . $row['name']);
-    $names[] = $row;
+    $ingredient[] = $row;
   }
 
   return $app['twig']->render('database.twig', array(
-    'names' => $names
+    'ingredient' => $ingredient
   ));
 });
 
