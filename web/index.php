@@ -5,7 +5,6 @@ require('../vendor/autoload.php');
 $app = new Silex\Application();
 $app['debug'] = true;
 
-
 $dbopts = parse_url(getenv('DATABASE_URL'));
 $app->register(new Csanquer\Silex\PdoServiceProvider\Provider\PDOServiceProvider('pdo'),
                array(
@@ -42,6 +41,12 @@ $app->get('/makeburger', function() use($app) {
   return $app['twig']->render('makeburger.twig');
 });
 
+$app->get('/testing', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('testing.twig');
+});
+
+
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return str_repeat('Hello', getenv('TIMES'));
@@ -51,6 +56,11 @@ $app->get('/', function() use($app) {
 $app->get('/db/', function() use($app) {
   $st = $app['pdo']->prepare('SELECT ingredient FROM ingredients');
   $st->execute();
+
+  $sql = "INSERT INTO recipes (burgername, burgerbun, chicken, beef, tofu) VALUES ('testBurger', 1, 0, 0, 1)";
+
+  $query = $db->prepare($sql);
+  $sql->execute();
 
   $ingredient = array();
   while ($row = $st->fetch(PDO::FETCH_ASSOC)) {
