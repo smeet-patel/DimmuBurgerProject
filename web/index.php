@@ -21,32 +21,19 @@
 
 ?>
 <p>This is the main page</p>
-<table>
-    <tr>
-    <td><b>Name</b></td>
-    <td><b>Scientific Name</b></td>
-    <td><b>Information</b></td>
-    </tr>
+<p>burger name</p>
 
 <?php
-    $db = parse_url(getenv("DATABASE_URL"));
-    $dbconnect=mysqli_connect($db);
-$query = mysqli_query($dbconnect, "SELECT * FROM recipes")
-or die (mysqli_error($dbconnect));
+    $query = mysqli_query($dbconnect, "SELECT * FROM recipes")
+    or die (mysqli_error($dbconnect));
 
-while ($row = mysqli_fetch_array($query)) {
-echo
-"<tr>
-    <td><img src=".$row['burgername']." ></td>
-    <td>{$row['burgerbun']}</td>
-    <td>{$row['chicken']}</td>
-    <td>{$row['beef']}</td>
-    <td>{$row['tofu']}</td>
-</tr>\n";
-
-}
+    while ($row = mysqli_fetch_array($query)) {
+    echo
+    "{$row['burgername']}</h4>";
+    }
+    ?>
 
 ?>
-</table>
+
 </body>
 </html>
