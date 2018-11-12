@@ -57,10 +57,8 @@ $app->get('/db/', function() use($app) {
   $st = $app['pdo']->prepare('SELECT ingredient FROM ingredients');
   $st->execute();
 
-  $sql = "INSERT INTO recipes (burgername, burgerbun, chicken, beef, tofu) VALUES ('testBurger', 1, 0, 0, 1)";
-
-  $query = $db->prepare($sql);
-  $sql->execute();
+  $sta = $app['pdo']->prepare('INSERT INTO recipes (burgername, burgerbun, chicken, beef, tofu) VALUES (\'testBurger\', 1, 0, 0, 1)');
+  $sta->execute();
 
   $ingredient = array();
   while ($row = $st->fetch(PDO::FETCH_ASSOC)) {
