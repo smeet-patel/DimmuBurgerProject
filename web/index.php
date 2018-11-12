@@ -9,8 +9,11 @@
 </head>
 <body>
 <?php
-    $db = parse_url(getenv("DATABASE_URL"));
-    $dbconnect = mysqli_connect($db);
+    // $db = parse_url(getenv("DATABASE_URL"));
+    // $dbconnect = mysqli_connect($db);
+
+    $db_url = getenv("DATABASE_URL");
+    $dbconnect = pg_connect($db_url);
 
     if ($dbconnect->connect_error) {
     die("Database connection failed: " . $dbconnect->connect_error);
