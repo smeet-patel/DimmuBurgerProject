@@ -18,22 +18,23 @@
         echo "Connected!";
     }
 
-
-?>
-<p>This is the main page</p>
-<p>burger name</p>
-
-<?php
     $query = mysqli_query($dbconnect, "SELECT * FROM recipes")
     or die (mysqli_error($dbconnect));
 
     while ($row = mysqli_fetch_array($query)) {
     echo
-    "{$row['burgername']}</h4>";
+    "<h4>{$row['burgername']}</h4>";
+    "<h4>{$row['burgerbun']}</h4>";
+    "<h4>{$row['chicken']}</h4>";
+    "<h4>{$row['beef']}</h4>";
+    "<h4>{$row['tofu']}</h4>";
     }
     ?>
 
 ?>
+<p>This is the main page</p>
+<p>burger name</p>
+=
 
 </body>
 </html>
