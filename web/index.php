@@ -42,7 +42,7 @@ $app->get('/makeburger', function() use($app) {
 
 $app->get('/testing', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['php']->render('testing.php');
+  return $app->render('testing.php');
 });
 
 $app->post('/testing', function (Request $request) {
