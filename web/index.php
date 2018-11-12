@@ -10,7 +10,7 @@
 <body>
 <?php
     $db = parse_url(getenv("DATABASE_URL"));
-    $dbconnect=mysqli_connect($db);
+    $dbconnect = mysqli_connect($db);
 
     if ($dbconnect->connect_error) {
     die("Database connection failed: " . $dbconnect->connect_error);
@@ -18,16 +18,12 @@
         echo "Connected!";
     }
 
-    $query = mysqli_query($dbconnect, "SELECT * FROM recipes")
+    $query = mysqli_query($dbconnect, "SELECT ''burgername FROM recipes")
     or die (mysqli_error($dbconnect));
 
     while ($row = mysqli_fetch_array($query)) {
     echo
     "<h4>{$row['burgername']}</h4>";
-    "<h4>{$row['burgerbun']}</h4>";
-    "<h4>{$row['chicken']}</h4>";
-    "<h4>{$row['beef']}</h4>";
-    "<h4>{$row['tofu']}</h4>";
     }
     ?>
 
