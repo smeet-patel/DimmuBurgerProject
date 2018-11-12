@@ -5,6 +5,10 @@ require('../vendor/autoload.php');
 $app = new Silex\Application();
 $app['debug'] = true;
 
+use Silex\Provider\FormServiceProvider;
+
+$app->register(new FormServiceProvider());
+
 $dbopts = parse_url(getenv('DATABASE_URL'));
 $app->register(new Csanquer\Silex\PdoServiceProvider\Provider\PDOServiceProvider('pdo'),
                array(
@@ -40,11 +44,10 @@ $app->get('/makeburger', function() use($app) {
   return $app['twig']->render('makeburger.twig');
 });
 
-$app->get('/testing', function() use($app) {
-  $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('testing.php');
-});
-
+// $app->get('/testing', function() use($app) {
+//   $app['monolog']->addDebug('logging output.');
+//   return $app['twig']->render('testing.twig');
+// });
 
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
@@ -68,5 +71,38 @@ $app->get('/db/', function() use($app) {
     'ingredient' => $ingredient
   ));
 });
+
+$app->match('/testing', function (Request $request) use ($app) {
+  // some default data for when the form is displayed the first time
+  $data = array(
+      'name' => 'Your name',
+      'email' => 'Your email',
+  );
+
+  $form = $app['form.factory']->createBuilder('form', $data)
+      ->add('name')
+      ->add('email')
+      ->add('billing_plan', 'choice', array(
+          'choices' => array(1 => 'free', 2 => 'small_business', 3 => 'corporate'),
+          'expanded' => true,
+      ))
+      ->getForm();
+
+  $form->handleRequest($request);
+
+  if ($form->isValid()) {
+      $data = $form->getData();
+
+      // do something with the data
+
+      // redirect somewhere
+      return $app->redirect('/testing');
+  }
+
+  // display the form
+  return $app['twig']->render('testing.twig', array('form' => $form->createView()));
+});
+
+
 
 $app->run();
