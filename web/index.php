@@ -42,7 +42,7 @@ $app->get('/makeburger', function() use($app) {
 
 $app->get('/testing', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('testing.twig');
+  return $app['php']->render('testing.php');
 });
 
 $app->post('/testing', function (Request $request) {
@@ -53,7 +53,7 @@ $app->post('/testing', function (Request $request) {
   $tofu = $request->get('tofu');
 
   $sta = $app['pdo']->prepare('INSERT INTO recipes (burgername, burgerbun, chicken, beef, tofu) VALUES (:bugername, :burgerbun, :chicken, :beef, :tofu)');
-  $sta->execute();  
+  $sta->execute();
 });
 
 
