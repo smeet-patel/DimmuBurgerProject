@@ -41,7 +41,7 @@ $app->get('/makeburger', function() use($app) {
 });
 
 $app->get('/testing', function() use($app) {
-
+  return $app->render('testing.php');
 });
 
 $app->post('/testing', function (Request $request) {
