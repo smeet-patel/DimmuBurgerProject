@@ -29,7 +29,8 @@
     </tr>
 
 <?php
-
+    $db = parse_url(getenv("DATABASE_URL"));
+    $dbconnect=mysqli_connect($db);
 $query = mysqli_query($dbconnect, "SELECT * FROM recipes")
 or die (mysqli_error($dbconnect));
 
