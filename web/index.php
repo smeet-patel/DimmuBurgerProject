@@ -41,8 +41,7 @@ $app->get('/makeburger', function() use($app) {
 });
 
 $app->get('/testing', function() use($app) {
-  $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('testing.php');
+
 });
 
 $app->post('/testing', function (Request $request) {
