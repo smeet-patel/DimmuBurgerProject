@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
+{% $sta = $app['pdo']->prepare('INSERT INTO recipes (burgername, burgerbun, chicken, beef, tofu) VALUES (\'testBurger\', 1, 0, 0, 1)'); %}
+{% $sta->execute(); %}
+
 <ul>
 {% for i in ingredient %}
   <li> {{ i.ingredient }} </li>
