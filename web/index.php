@@ -9,31 +9,21 @@
 </head>
 <body>
 <?php
-    // $db = parse_url(getenv("DATABASE_URL"));
-    // $dbconnect = mysqli_connect($db);
+    $db_url = getenv("DATABASE_URL") ?: "postgres://user:pass@host:port/dbname";
+    echo "$db_url\n";
 
-    $db_url = getenv("DATABASE_URL");
-    $dbconnect = pg_connect($db_url);
+    $db = pg_connect($db_url);
+    if($db) {echo "connected";} else {echo "not connected";}
 
-    if ($dbconnect->connect_error) {
-    die("Database connection failed: " . $dbconnect->connect_error);
-    } else {
-        echo "Connected!";
+    $selectSql = "SELECT 1";
+    $result =  pg_query($db, $selectSql);
+
+    while ($row = pg_fetch_row($result)) {
+        var_dump($row);
     }
-
-    $query = mysqli_query($dbconnect, "SELECT ''burgername FROM recipes")
-    or die (mysqli_error($dbconnect));
-
-    while ($row = mysqli_fetch_array($query)) {
-    echo
-    "<h4>{$row['burgername']}</h4>";
-    }
-    ?>
-
 ?>
 <p>This is the main page</p>
 <p>burger name</p>
-=
 
 </body>
 </html>
