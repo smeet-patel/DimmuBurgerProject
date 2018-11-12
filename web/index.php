@@ -51,7 +51,7 @@ $app->post('/testing', function (Request $request) {
   $beef = $request->get('beef');
   $tofu = $request->get('tofu');
 
-  $sta = $app['pdo']->prepare('INSERT INTO recipes (burgername, burgerbun, chicken, beef, tofu) VALUES (:bugername, :burgerbun, :chicken, :beef, :tofu)');
+  $sta = $app['pdo']->prepare('INSERT INTO recipes (burgername, burgerbun, chicken, beef, tofu) VALUES ($burgername, $burgerbun, $chicken, $beef, $tofu)');
   $sta->execute();
 });
 
