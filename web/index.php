@@ -37,6 +37,11 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
+$app->get('/makeburger', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('makeburger.twig');
+});
+
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return str_repeat('Hello', getenv('TIMES'));
