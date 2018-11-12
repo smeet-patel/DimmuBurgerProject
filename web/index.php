@@ -30,7 +30,6 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 // Our web handlers
-
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('index.twig');
@@ -43,7 +42,7 @@ $app->get('/makeburger', function() use($app) {
 
 $app->get('/testing', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('testing.twig');
+  return $app['twig']->render('testing.php');
 });
 
 
@@ -56,6 +55,9 @@ $app->get('/', function() use($app) {
 $app->get('/db/', function() use($app) {
   $st = $app['pdo']->prepare('SELECT ingredient FROM ingredients');
   $st->execute();
+
+  // $sta = $app['pdo']->prepare('INSERT INTO recipes (burgername, burgerbun, chicken, beef, tofu) VALUES (\'testBurger\', 1, 0, 0, 1)');
+  // $sta->execute();  
 
   $ingredient = array();
   while ($row = $st->fetch(PDO::FETCH_ASSOC)) {
