@@ -31,6 +31,13 @@
         $db["pass"],
         ltrim($db["path"], "/")
     ));
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+    
+    $stmt = $pdo->query('SELECT * FROM ingredients');
+
+    while($row = $stmt->fetch()){
+       echo $row->ingredient . '<br/>';
+    }    
 
 
 ?>
