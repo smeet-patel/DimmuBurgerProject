@@ -155,9 +155,11 @@
 		<div id="mid">
 			<h1 id="bread" style="padding-bottom: 0.5em;">ORDER STATUS:</h1>
             <?php
-                $stmt2 = $conn->query('SELECT * FROM orders');
-                while($row = $stmt2->fetch(PDO::FETCH_ASSOC)){
-                    echo $row['burger'] . '<br>';
+                echo "Your order Number is...";
+
+                $stmt1 = $conn->query('SELECT * FROM orders');
+                while($row = $stmt1->fetch(PDO::FETCH_ASSOC)){
+                    echo $row['ordernumber'] . '<br>';
                 }
 
             ?>
