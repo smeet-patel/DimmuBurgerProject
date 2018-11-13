@@ -1,6 +1,6 @@
 <?php
 
-    If(isset($_POST['submit'])){
+    If(isset($_POST['newburger'])){
         try {
         $db = parse_url(getenv("DATABASE_URL"));
 

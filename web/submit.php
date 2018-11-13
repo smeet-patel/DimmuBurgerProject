@@ -38,7 +38,7 @@
     // $stmt->execute(['title' => $title, 'body' => $body, 'author' => $author]);
     // echo 'Post added!';
 
-    If(isset($_POST['submit'])){
+    if(isset($_POST['submit'])){
         try {
         $db = parse_url(getenv("DATABASE_URL"));
 
