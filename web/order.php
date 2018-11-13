@@ -529,7 +529,7 @@
 						<tr>
 							<td>
 								<!-- <input type="radio" name="1" value="1" id="radio1" style="display: none"> -->
-								<div class="cen"><input type="submit" class="btnSub" name="submit" value="Proceed with order"
+								<div class="cen"><input type="submit" class="btnSub" name="newburger" value="Proceed with order"
 									 style=" color: red;font-size: calc(12px + 1.5vw);margin: 5px;padding-left: 1em;padding-right: 1em;padding-bottom: 1em;cursor: pointer;" /></div>
 								<!-- <div class="cen"><button class="btnSub" id="Another">Order Another Burger</button></div> -->
 							</td>

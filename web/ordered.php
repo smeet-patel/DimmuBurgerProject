@@ -14,8 +14,10 @@
         ));
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    echo "Connected";
+
     // prepare sql and bind parameters
-    $stmt = $conn->prepare("INSERT INTO  recipes(tomato,lettuce,capsicum,onion,pineapple,carrot,avocado,pickles,cheddar, swiss,halloumi,paneer) 
+    $stmt = $conn->prepare("INSERT INTO recipes (tomato,lettuce,capsicum,onion,pineapple,carrot,avocado,pickles,cheddar, swiss,halloumi,paneer) 
     VALUES ('$Tomato','$Lettuce','$Capsicum','$Onion','$Pineapple','$Carrot','$Avocado','$Pickles','$Cheddar','$Swiss','$Halloumi','$Paneer')");
 
         $stmt->bindParam(':tomato', $Tomato);
