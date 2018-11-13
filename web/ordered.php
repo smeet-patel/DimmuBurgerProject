@@ -162,6 +162,8 @@
                     echo $row['ordernumber'] . '<br>';
                 }
 
+                $stmt1->execute();
+
             ?>
 	    </div>
 	</div>
