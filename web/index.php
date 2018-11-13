@@ -39,16 +39,10 @@
        echo $row->ingredient . '<br/>';
     }    
 
-    $stmt = $conn->prepare("INSERT INTO test_table (id, name) VALUES (:id, :name)");
-        $stmt->bindParam(':id', $id);
-        $stmt->bindParam(':name', $name);
+    $stmt = $conn->prepare("INSERT INTO test_table (id, name) VALUES (2, 'kellr')");
+    $stmt->execute();
     
-    // insert a row
-        $id = $_POST["id"];
-        $name = $_POST["name"];
-        $stmt->execute();
-    
-        echo "New records created successfully";
+    echo "New records created successfully";
 
 ?>
 
