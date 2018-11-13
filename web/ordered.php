@@ -104,7 +104,15 @@
 
 
         $stmt->execute();
-        // echo "New records created successfully";
+        echo "New records created successfully";
+        $stmt1 = $conn->query('SELECT * FROM orders');
+        while($row = $stmt1->fetch(PDO::FETCH_ASSOC)){
+            echo $row['ordernumber'] . '<br>';
+        }
+
+        $stmt1->execute();
+
+
 
     }catch(PDOException $e){
     echo "Error: " . $e->getMessage();
@@ -156,13 +164,6 @@
 			<h1 id="bread" style="padding-bottom: 0.5em;">ORDER STATUS:</h1>
             <?php
                 echo "Your order Number is...";
-
-                $stmt1 = $conn->query('SELECT * FROM orders');
-                while($row = $stmt1->fetch(PDO::FETCH_ASSOC)){
-                    echo $row['ordernumber'] . '<br>';
-                }
-
-                $stmt1->execute();
 
             ?>
 	    </div>
