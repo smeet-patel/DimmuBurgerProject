@@ -53,7 +53,7 @@
        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
        // prepare sql and bind parameters
-       $stmt = $conn->prepare("INSERT INTO demo (title, body, author)
+       $stmt = $conn->prepare("INSERT INTO posts (title, body, author)
         VALUES (:title, :body, :author)");
         $stmt->bindParam(':title', $title);
         $stmt->bindParam(':body', $body);
