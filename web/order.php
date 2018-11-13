@@ -26,9 +26,9 @@
 <body>
 	<div class="nav1" id="mynav1">
 		<!--Adding My logo to the left and always showing -->
-		<a href="index.html">Dimmu Burger</a>
+		<a href="index.php">Dimmu Burger</a>
 		<!--Floating to the Left Side of the menu, the other pages-->
-		<a href="submit.php">Order</a>
+		<a href="order.php">Order</a>
 		<!-- Shows menubutton when screen is small
 		<a href="javascript:void(0);" style="font-size:15px;" class="menubutton" onclick="myFunction()">&#9776;</a> -->
 	</div>
