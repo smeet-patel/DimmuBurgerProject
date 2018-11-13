@@ -312,7 +312,7 @@ var price17 = document.getElementById("pita");
 var pp17 = 0;
 
 function itaT() {
-  if (checkBox4.checked == true) {
+  if (checkBox5.checked == true) {
     price17.innerHTML = "$" + (sauce$).toFixed(2);
     pp17 = (sauce$);
   } else {
@@ -322,6 +322,7 @@ function itaT() {
   totalp();
   countsauce = countsauce + 1;
   Nextsauce();
+  subsdisplay();
 }
 
 var slider1 = document.getElementById("myche");
@@ -377,7 +378,7 @@ output3.innerHTML = slider3.value;
 slider3.oninput = function () {
   output3.innerHTML = this.value;
   if (this.value > 0) {
-    price3.innerHTML = "$" + (this.value * 1.5 - .5);
+    price3.innerHTML = "$" + (this.value * 1.5 - .5).toFixed(2);
     pp3 = this.value * 1.5 - .5.toFixed(2);
   } else {
     price3.innerHTML = "";
