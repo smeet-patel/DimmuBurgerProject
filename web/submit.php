@@ -158,7 +158,7 @@
 			<!-- Bread
 			    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 			<h2 class="w">Bread</h2>
-			<form action="submit.php" align="center" method="post">
+			<form action="submit.php" method="post">
 			<table id="custom">
 				<tr id="Hov">
 					<td width="15%">
@@ -352,7 +352,7 @@
 						</td>
 						<td width="30%">
 							<div class="cen">
-								<div class="""slidecontainer">
+								<div class="slidecontainer">
 									<input type="range" min="0" max="3" value="0" class="slider" id="myTomato" name="Tomato">
 								</div>
 							</div>
@@ -368,7 +368,7 @@
 						</td>
 						<td width="30%">
 							<div class="cen">
-								<div class="""slidecontainer">
+								<div class="slidecontainer">
 									<input type="range" min="0" max="3" value="0" class="slider" id="myLettuce" name="Lettuce">
 								</div>
 							</div>
@@ -384,7 +384,7 @@
 						</td>
 						<td width="30%">
 							<div class="cen">
-								<div class="""slidecontainer">
+								<div class="slidecontainer">
 									<input type="range" min="0" max="3" value="0" class="slider" id="myCapsicum" name="Capsicum">
 								</div>
 							</div>
@@ -400,7 +400,7 @@
 						</td>
 						<td width="30%">
 							<div class="cen">
-								<div class="""slidecontainer">
+								<div class="slidecontainer">
 									<input type="range" min="0" max="3" value="0" class="slider" id="myOnion" name="Onion">
 								</div>
 							</div>
@@ -416,7 +416,7 @@
 						</td>
 						<td width="30%">
 							<div class="cen">
-								<div class="""slidecontainer">
+								<div class="slidecontainer">
 									<input type="range" min="0" max="3" value="0" class="slider" id="myCarrot" name="Carrot">
 								</div>
 							</div>
@@ -432,7 +432,7 @@
 						</td>
 						<td width="30%">
 							<div class="cen">
-								<div class="""slidecontainer">
+								<div class="slidecontainer">
 									<input type="range" min="0" max="3" value="0" class="slider" id="myPineapple" name="Pineapple">
 								</div>
 							</div>
@@ -448,7 +448,7 @@
 						</td>
 						<td width="30%">
 							<div class="cen">
-								<div class="""slidecontainer">
+								<div class="slidecontainer">
 									<input type="range" min="0" max="3" value="0" class="slider" id="myAvocado" name="Avocado">
 								</div>
 							</div>
@@ -464,7 +464,7 @@
 						</td>
 						<td width="30%">
 							<div class="cen">
-								<div class="""slidecontainer">
+								<div class="slidecontainer">
 									<input type="range" min="0" max="3" value="0" class="slider" id="myPickles" name="Pickles">
 								</div>
 							</div>
@@ -576,7 +576,7 @@
 					<tr>
 						<td>
 						<!-- <input type="radio" name="1" value="1" id="radio1" style="display: none"> -->
-						<input type="submit" class="btnSub" name="newburger" align="center" value="Order Another Burger 1" />
+						<input type="submit" class="btnSub" name="newburger" value="Order Another Burger 1" />
 							<!-- <div class="cen"><button class="btnSub" id="Another">Order Another Burger</button></div> -->
 						</td>
 					</tr>
