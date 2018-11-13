@@ -10,9 +10,8 @@
 <body>
 <?php
     $db_url = parse_url(getenv("DATABASE_URL"));
-    $db_url["path"] = ltrim($db["path"], "/");
 
-    $db = pg_connect( $db_url );
+    $db = pg_connect($db_url);
     if(!$db) {
        echo "Error : Unable to open database\n";
     } else {
