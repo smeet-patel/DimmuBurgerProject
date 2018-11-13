@@ -9,20 +9,25 @@
 </head>
 <body>
 <?php
+
+    require_once 'dbconfig.php';
+
     $db_url = parse_url(getenv("DATABASE_URL"));
 
-    $db = pg_connect($db_url);
-    if(!$db) {
-       echo "Error : Unable to open database\n";
-    } else {
-       echo "Opened database successfully\n";
-    }
-
-    $result = pg_query($db, "SELECT ingredient FROM ingredients");
-    $row = pg_fetch_assoc($result);
-
+    try{
+        // create a PostgreSQL database connection
+        $conn = new PDO($db_url);
+        
+        // display a message if connected to the PostgreSQL successfully
+        if($conn){
+        echo "Connected to the <strong>$db</strong> database successfully!";
+        }
+       }catch (PDOException $e){
+        // report error message
+        echo $e->getMessage();
+       }
 ?>
-<p>burger name</p>
+<p>One</p>
 
 </body>
 </html>
