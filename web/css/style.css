@@ -178,7 +178,7 @@ table {
 
 td {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin-left: auto;
     margin-right: auto;
     /* border: 1px solid black; */
@@ -213,7 +213,7 @@ th {
 .totalrow {
     float: left;
     margin-left: 6%;
-    font-size: 1.2em;
+    font-size: 1.4em;
     position: relative;
     text-align: center;
     text-transform: uppercase;
@@ -319,7 +319,7 @@ th {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #010E1E;
     border-color: #010E1E;
-    font-size: 3vw;
+    font-size: 1.8em;
     margin: 5px;
     padding-left: 1em;
     padding-right: 1em;
@@ -331,7 +331,7 @@ input[type=submit] {
     width: 100%;
     background-color: #010E1E;
     color: white;
-    font-size: 2vw;
+    font-size: 1.5em;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -365,7 +365,7 @@ input[type=submit] {
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 1.4em;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -439,7 +439,7 @@ label {
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 1.4em;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
