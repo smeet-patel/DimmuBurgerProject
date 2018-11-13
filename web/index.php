@@ -37,7 +37,7 @@
 			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<!-- </div> -->
 	<div class="containerWork">
-		<div id="mid">
+		<div id="mid" style="background-color: #B6D1D3">
 			<h1 class="headTitle">Delicious Burgers
                 <br/>Made How You Want
             </h1>

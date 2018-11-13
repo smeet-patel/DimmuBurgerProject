@@ -16,8 +16,8 @@
 
         echo "Connected";
 
-        $stmt = $conn->prepare("INSERT INTO recipes (paneer, tomato, lettuce, capsicum, onion, pineapple, carrot, avocado, pickles, cheddar, swiss, halloumi)
-        VALUES (:paneer, :tomato, :lettuce, :capsicum, :onion, :pineapple, :carrot, :avocado, :pickles, :cheddar, :swiss, :halloumi)");
+        $stmt = $conn->prepare("INSERT INTO recipes (burgerbun, junior, wrap, paneer, tomato, lettuce, capsicum, onion, pineapple, carrot, avocado, pickles, cheddar, swiss, halloumi)
+        VALUES (:burgerbun, :junior, :wrap, :paneer, :tomato, :lettuce, :capsicum, :onion, :pineapple, :carrot, :avocado, :pickles, :cheddar, :swiss, :halloumi)");
         $stmt->bindParam(':paneer', $Paneer);
         $stmt->bindParam(':tomato', $Tomato);
         $stmt->bindParam(':lettuce', $Lettuce);
@@ -30,8 +30,10 @@
         $stmt->bindParam(':cheddar', $Cheddar);
         $stmt->bindParam(':swiss', $Swiss);
         $stmt->bindParam(':halloumi', $Halloumi);
+        $stmt->bindParam(':burgerbun', $Burger);
+        $stmt->bindParam(':junior', $JrBurger);
+        $stmt->bindParam(':wrap', $wrap);
 
-    
         $Paneer = $_POST['Paneer'];
         $Tomato = $_POST['Tomato'];
         $Lettuce = $_POST['Lettuce'];
@@ -41,10 +43,25 @@
         $Carrot = $_POST['Carrot'];
         $Avocado = $_POST['Avocado'];
         $Pickles = $_POST['Pickles'];
-
         $Cheddar = $_POST['Cheddar'];
         $Swiss = $_POST['Swiss'];
         $Halloumi = $_POST['Halloumi'];
+
+        $radioVal = $_POST["Bread"];
+
+        if ($radioVal==Burger){
+            // echo "burger 1";
+            $Burger = "1";
+        }elseif($radioVal==JrBurger){
+            // echo "jr burger 2";
+            $JrBurger = "1";
+        }elseif($radioVal==Tortillas){
+            // echo "wrap 3";
+            $wrap = "1";
+        }
+
+
+
 
         $stmt->execute();
         echo "New records created successfully";
