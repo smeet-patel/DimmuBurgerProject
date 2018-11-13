@@ -16,13 +16,13 @@
 
         echo "Connected";
 
-        $stmt = $conn->prepare("INSERT INTO recipes (paneer, tomato, lettuce, capsicum, oinon, pineapple, carrot, avocado, pickles, cheddar, swiss, halloumi)
+        $stmt = $conn->prepare("INSERT INTO recipes (paneer, tomato, lettuce, capsicum, onion, pineapple, carrot, avocado, pickles, cheddar, swiss, halloumi)
         VALUES (:paneer, :tomato, :lettuce, :capsicum, :oinon, :pineapple, :carrot, :avocado, :pickles, :cheddar, :swiss, :halloumi)");
         $stmt->bindParam(':paneer', $Paneer);
         $stmt->bindParam(':tomato', $Tomato);
         $stmt->bindParam(':lettuce', $Lettuce);
         $stmt->bindParam(':capsicum', $Capsicum);
-        $stmt->bindParam(':oinon', $Onion);
+        $stmt->bindParam(':onion', $Onion);
         $stmt->bindParam(':pineapple', $Pineapple);
         $stmt->bindParam(':carrot', $Carrot);
         $stmt->bindParam(':avocado', $Avocado);
