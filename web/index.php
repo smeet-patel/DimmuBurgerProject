@@ -9,23 +9,18 @@
 </head>
 <body>
 <?php
+    $db_url = getenv("DATABASE_URL") ?: "postgres://user:pass@host:port/dbname";
+    echo "$db_url\n";
 
-    require_once 'dbconfig.php';
+    $db = pg_connect($db_url);
+    if($db) {echo "connected";} else {echo "not connected";}
 
-    $db_url = parse_url(getenv("DATABASE_URL"));
+    $selectSql = "SELECT 1";
+    $result =  pg_query($db, $selectSql);
 
-    try{
-        // create a PostgreSQL database connection
-        $conn = new PDO($db_url);
-        
-        // display a message if connected to the PostgreSQL successfully
-        if($conn){
-        echo "Connected to the <strong>$db</strong> database successfully!";
-        }
-       }catch (PDOException $e){
-        // report error message
-        echo $e->getMessage();
-       }
+    while ($row = pg_fetch_row($result)) {
+        var_dump($row);
+    }
 ?>
 <p>One</p>
 
