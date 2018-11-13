@@ -9,27 +9,20 @@
 </head>
 <body>
 <?php
-    $db = parse_url(getenv("DATABASE_URL"));
-    $db["path"] = ltrim($db["path"], "/");
-    $dbconnect=mysqli_connect($db);
+    $db_url = parse_url(getenv("DATABASE_URL"));
+    $db_url["path"] = ltrim($db["path"], "/");
 
-    if ($dbconnect->connect_error) {
-    die("Database connection failed: " . $dbconnect->connect_error);
+    $db = pg_connect( $db_url );
+    if(!$db) {
+       echo "Error : Unable to open database\n";
     } else {
-        echo "Connected!";
+       echo "Opened database successfully\n";
     }
 
-    $query = mysqli_query($dbconnect, "SELECT * FROM ingredients")
-    or die (mysqli_error($dbconnect));
-
-    while ($row = mysqli_fetch_array($query)) {
-    echo
-    "<h4>{$row['ingredient']}</h4>";
-    }
-    ?>
+    $result = pg_query($db, "SELECT ingredient FROM ingredients");
+    $row = pg_fetch_assoc($result);
 
 ?>
-<p>This is the main page</p>
 <p>burger name</p>
 
 </body>
