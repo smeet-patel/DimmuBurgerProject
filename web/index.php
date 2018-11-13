@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="phpTest.css">
 </head>
 <body>
+<form action="" method="post">
+<label>Title :</label>
+<input type="text" name="title" id="title" required="required" placeholder="Please Enter Name"/><br /><br />
+<label>Body :</label>
+<input type="text" name="body" id="body" required="required" placeholder="Please enter a Body"/><br/><br />
+<label>Author :</label>
+<input type="text" name="author" id="author" required="required" placeholder="Please Enter your name"/><br/><br />
+<input type="submit" value=" Submit " name="submit"/><br />
+</form>
+
 <?php
     // $db_url = getenv("DATABASE_URL") ?: "postgres://user:pass@host:port/dbname";
     // echo "$db_url\n";
@@ -39,20 +49,22 @@
     //    echo $row->ingredient . '<br/>';
     // }    
 
-    $title = 'POST ONE';
-    $body = 'THIS IS A POST';
-    $author = 'SCROOGE MCDUCK';
+    // $title = 'POST ONE';
+    // $body = 'THIS IS A POST';
+    // $author = 'SCROOGE MCDUCK';
+
+    $title = '$_POST[\'title\']';
+    $body = '$_POST[\'body\']';
+    $author = '$_POST[\'author\']';    
 
     $sql = 'INSERT INTO posts(title, body, author) VALUES (:title, :body, :author)';
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['title' => $title, 'body' => $body, 'author' => $author]);
     echo 'Post added!';
-
-
 ?>
-
 <html>
 <body>
+
 
 
 </body>
