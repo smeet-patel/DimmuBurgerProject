@@ -69,7 +69,7 @@
 			<!-- Bread
 			    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 			<h2 class="w">Bread</h2>
-			<form action="submit.php" method="post">
+			<form action="ordered.php" method="post">
 				<table id="custom">
 					<tr id="Hov">
 						<td width="15%">
