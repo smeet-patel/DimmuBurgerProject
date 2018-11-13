@@ -16,7 +16,7 @@
 
         echo "Connected";
 
-        $stmt = $conn->prepare("INSERT INTO ingredients (paneer, tomato, lettuce)
+        $stmt = $conn->prepare("INSERT INTO recipes (paneer, tomato, lettuce)
         VALUES (:Paneer, :Tomato, :Lettuce)");
         $stmt->bindParam(':Paneer', $paneer);
         $stmt->bindParam(':Tomato', $tomato);
