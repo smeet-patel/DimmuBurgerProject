@@ -184,6 +184,47 @@ h1 {
 
 /* ------------ NAV BAR CODE ENDS ------------ */
 
+
+
+.btn {
+    background-color: crimson;
+    margin: 5px;
+    width: 75px;
+    color: white;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.btn:focus {
+    color: white;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.btnSub {
+    /* background-color: red; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: crimson;
+    border-color: crimson;
+    font-size: 1.4em;
+    padding: 5px;
+    margin: 5px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    /* width: 50%; */
+    /* color: white; */
+}
+
+
 /* ------------ Table ------------ */
 
 table {
