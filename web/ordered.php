@@ -16,8 +16,8 @@
 
         echo "Connected";
 
-        $stmt = $conn->prepare("INSERT INTO recipes (burgerbun, junior, wrap, paneer, tomato, lettuce, capsicum, onion, pineapple, carrot, avocado, pickles, cheddar, swiss, halloumi)
-        VALUES (:burgerbun, :junior, :wrap, :paneer, :tomato, :lettuce, :capsicum, :onion, :pineapple, :carrot, :avocado, :pickles, :cheddar, :swiss, :halloumi)");
+        $stmt = $conn->prepare("INSERT INTO recipes (burgerbun, junior, wrap, chicken, beef, falafel, tofu, paneer, tomato, lettuce, capsicum, onion, pineapple, carrot, avocado, pickles, cheddar, swiss, halloumi, tomatosauce, curry, italian, aioli, mayo)
+        VALUES (:burgerbun, :junior, :wrap, :chicken, :beef, :falafel, :tofu, :paneer, :tomato, :lettuce, :capsicum, :onion, :pineapple, :carrot, :avocado, :pickles, :cheddar, :swiss, :halloumi, :tomatosauce, :curry, :italian, :aioli, :mayo)");
         $stmt->bindParam(':paneer', $Paneer);
         $stmt->bindParam(':tomato', $Tomato);
         $stmt->bindParam(':lettuce', $Lettuce);
@@ -30,9 +30,21 @@
         $stmt->bindParam(':cheddar', $Cheddar);
         $stmt->bindParam(':swiss', $Swiss);
         $stmt->bindParam(':halloumi', $Halloumi);
+
         $stmt->bindParam(':burgerbun', $Burger);
         $stmt->bindParam(':junior', $JrBurger);
         $stmt->bindParam(':wrap', $wrap);
+
+        $stmt->bindParam(':chicken', $Chicken);
+        $stmt->bindParam(':beef', $Beef);
+        $stmt->bindParam(':falafel', $Falafel);
+        $stmt->bindParam(':tofu', $Tofu);        
+
+        $stmt->bindParam(':tomatosauce', $tomatosauce);
+        $stmt->bindParam(':curry', $Curry);
+        $stmt->bindParam(':italian', $Italian);
+        $stmt->bindParam(':aioli', $Aioli);
+        $stmt->bindParam(':mayo', $Mayonnaise); 
 
         $Paneer = $_POST['Paneer'];
         $Tomato = $_POST['Tomato'];
@@ -50,17 +62,45 @@
         $radioVal = $_POST["Bread"];
 
         if ($radioVal==Burger){
-            // echo "burger 1";
             $Burger = "1";
         }elseif($radioVal==JrBurger){
-            // echo "jr burger 2";
             $JrBurger = "1";
         }elseif($radioVal==Tortillas){
-            // echo "wrap 3";
             $wrap = "1";
         }
 
+        $radioVal2 = $_POST["Base"];
 
+        if ($radioVal2==Chicken){
+            $Chicken = "1";
+        }elseif($radioVal2==Beef){
+            $Beef = "1";
+        }elseif($radioVal2==Falafel){
+            $Falafel = "1";
+        }elseif($radioVal2==Tofu){
+            $Tofu = "1";
+        }
+
+        $checkVal = $_POST["Sauce"];
+        $checkVal1 = $_POST["Sauce1"];
+        $checkVal2 = $_POST["Sauce2"];
+        $checkVal3 = $_POST["Sauce3"];
+        $checkVal4 = $_POST["Sauce4"];
+        if ($checkVal==tomatosauce){
+            $tomatosauce = "1";
+        }
+        if($checkVal1==Curry){
+            $Curry = "1";
+        }
+        if($checkVal2==Italian){
+            $Italian = "1";
+        }
+        if($checkVal3==Aioli){
+            $Aioli= "1";
+        }
+        if($checkVal4==Mayonnaise){
+            $Mayonnaise = "1";
+        }
 
 
         $stmt->execute();
