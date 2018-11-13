@@ -51,16 +51,27 @@
 
     // $title = 'POST ONE';
     // $body = 'THIS IS A POST';
-    // $author = 'SCROOGE MCDUCK';
+    // $author = 'SCROOGE MCDUCK';   
 
-    $title = '$_POST[\'title\']';
-    $body = '$_POST[\'body\']';
-    $author = '$_POST[\'author\']';    
+    // $sql = 'INSERT INTO posts(title, body, author) VALUES (:title, :body, :author)';
 
-    $sql = 'INSERT INTO posts(title, body, author) VALUES (:title, :body, :author)';
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(['title' => $title, 'body' => $body, 'author' => $author]);
-    echo 'Post added!';
+
+    // $stmt = $pdo->prepare($sql);
+    // $stmt->execute(['title' => $title, 'body' => $body, 'author' => $author]);
+    // echo 'Post added!';
+    $form = $_POST;
+    $title = $form['title'];
+    $body = $form['body'];
+    $author = $form['author'];
+
+    $add_supporter = $db->prepare("INSERT INTO posts (title, body, author) 
+    VALUES (:title, :body, :author)");
+
+        $add_supporter->bindParam(":title", $title);
+        $add_supporter->bindParam(":body", $body);
+        $add_supporter->bindParam(":author", $author);
+        $add_supporter->execute();
+
 ?>
 <html>
 <body>
