@@ -16,15 +16,36 @@
 
         echo "Connected";
 
-        $stmt = $conn->prepare("INSERT INTO recipes (paneer, tomato, lettuce)
-        VALUES (:Paneer, :Tomato, :Lettuce)");
-        $stmt->bindParam(':Paneer', $paneer);
-        $stmt->bindParam(':Tomato', $tomato);
-        $stmt->bindParam(':Lettuce', $lettuce);
+        $stmt = $conn->prepare("INSERT INTO recipes (paneer, tomato, lettuce, capsicum, oinon, pineapple, carrot, avocado, pickles, cheddar, swiss, halloumi)
+        VALUES (:paneer, :tomato, :lettuce, :capsicum, :oinon, :pineapple, :carrot, :avocado, :pickles, :cheddar, :swiss, :halloumi)");
+        $stmt->bindParam(':paneer', $Paneer);
+        $stmt->bindParam(':tomato', $Tomato);
+        $stmt->bindParam(':lettuce', $Lettuce);
+        $stmt->bindParam(':capsicum', $Capsicum);
+        $stmt->bindParam(':oinon', $Onion);
+        $stmt->bindParam(':pineapple', $Pineapple);
+        $stmt->bindParam(':carrot', $Carrot);
+        $stmt->bindParam(':avocado', $Avocado);
+        $stmt->bindParam(':pickles', $Pickles);
+        $stmt->bindParam(':cheddar', $Cheddar);
+        $stmt->bindParam(':swiss', $Swiss);
+        $stmt->bindParam(':halloumi', $Halloumi);
+
     
-        $paneer = $_POST['Paneer'];
-        $tomato = $_POST['Tomato'];
-        $lettuce = $_POST['Lettuce'];
+        $Paneer = $_POST['Paneer'];
+        $Tomato = $_POST['Tomato'];
+        $Lettuce = $_POST['Lettuce'];
+        $Capsicum = $_POST['Capsicum'];
+        $Onion = $_POST['Onion'];
+        $Pineapple = $_POST['Pineapple'];
+        $Carrot = $_POST['Carrot'];
+        $Avocado = $_POST['Avocado'];
+        $Pickles = $_POST['Pickles'];
+
+        $Cheddar = $_POST['Cheddar'];
+        $Swiss = $_POST['Swiss'];
+        $Halloumi = $_POST['Halloumi'];
+
         $stmt->execute();
         echo "New records created successfully";
 
