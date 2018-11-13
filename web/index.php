@@ -39,8 +39,8 @@
        echo $row->ingredient . '<br/>';
     }    
 
-    $stmt = $conn->prepare("INSERT INTO test_table (id, name) VALUES (2, 'kellr')");
-    $stmt->execute();
+    $stm = $conn->prepare("INSERT INTO test_table (id, name) VALUES (2, 'kellr')");
+    $stm->execute();
     
     echo "New records created successfully";
 
