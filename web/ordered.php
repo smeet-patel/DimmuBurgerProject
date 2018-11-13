@@ -114,7 +114,32 @@
     $conn = null;
     }    
 
+    if (isset($_POST['newburger'])) {
+
+        // $query = mysqli_query($db, "SELECT MAX(burgername) AS ordernumber FROM recipes");
+        // $row = mysqli_fetch_array($query);
+        // echo "<p class='totalrow'>Burger # " . $row['ordernumber'] . "</p>";
+
+        $sql = 'SELECT MAX(burgername) FROM recipes';
+        $st = $pdo->prepare($sql);
+        $st->execute(['ordernumber' => $ordernumber]);
+        $post = $st->fetch();
+
+
+        $stm = $conn->prepare("INSERT INTO orders (ordernumber, burger, orderstate)
+        VALUES (:ordernumber, :burger, :orderstate)");
+        $stm->bindParam(':ordernumber', $ordernumber);
+        $stm->bindParam(':burger', $ordernumber);
+        $stm->bindParam(':orderstate', $orderstate);
+    
+        $orderstate = "new";
+
+        $stm->execute();
+        echo "Order: " + $ordernumber + " " + $orderstate;
+
+    }
 ?>
+
 
 
 
