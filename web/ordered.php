@@ -17,10 +17,10 @@
         echo "Connected";
 
         $stmt = $conn->prepare("INSERT INTO ingredients (paneer, tomato, lettuce)
-        VALUES (:paneer, :tomato, :lettuce)");
-        $stmt->bindParam(':paneer', $paneer);
-        $stmt->bindParam(':tomato', $tomato);
-        $stmt->bindParam(':lettuce', $lettuce);
+        VALUES (:Paneer, :Tomato, :Lettuce)");
+        $stmt->bindParam(':Paneer', $paneer);
+        $stmt->bindParam(':Tomato', $tomato);
+        $stmt->bindParam(':Lettuce', $lettuce);
     
         $paneer = $_POST['Paneer'];
         $tomato = $_POST['Tomato'];
