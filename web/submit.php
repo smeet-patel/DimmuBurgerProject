@@ -1,6 +1,8 @@
 <?php
 	// need user name, pass word  and database name.
-        $db = getenv("DATABASE_URL");
+    $db_url = parse_url(getenv("DATABASE_URL"));
+    $db = mysqli_connect($db_url);
+
 		if (isset($_POST['newburger']))
 		{
 
