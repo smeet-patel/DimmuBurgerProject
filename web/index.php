@@ -10,10 +10,14 @@
 <body>
 <?php
     $db_url = getenv("DATABASE_URL");
-    echo "$db_url\n";
+    //echo "$db_url\n";
 
-    $db = pg_connect($db_url);
+    // $db = pg_connect($db_url); 
+    $db = new PDO($db_url);
     if($db) {echo "connected";} else {echo "not connected";}
+
+
+
 ?>
 <p>This is the main page</p>
 <p>burger name</p>
@@ -24,15 +28,6 @@
     while ($row = pg_fetch_row($result)) {
         var_dump($row);
     }
-
-    $query = pg_query($dbconnect, "SELECT * FROM recipes")
-    or die (pg_error($dbconnect));
-
-    while ($row = pg_fetch_array($query)) {
-    echo
-    "<div><h4>{$row['burgername']}</h4></div>";
-    }
-    ?>
 
 ?>
 
