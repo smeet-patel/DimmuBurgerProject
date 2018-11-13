@@ -33,16 +33,21 @@
     ));
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
-    $stmt = $pdo->query('SELECT * FROM ingredients');
+    // $stmt = $pdo->query('SELECT * FROM ingredients');
 
-    while($row = $stmt->fetch()){
-       echo $row->ingredient . '<br/>';
-    }    
+    // while($row = $stmt->fetch()){
+    //    echo $row->ingredient . '<br/>';
+    // }    
 
-    $stm = $conn->prepare("INSERT INTO test_table (id, name) VALUES (2, 'kellr')");
-    $stm->execute();
-    
-    echo "New records created successfully";
+    $title = 'POST ONE';
+    $body = 'THIS IS A POST';
+    $author = 'SCROOGE MCDUCK';
+
+    $sql = 'INSERT INTO posts(title, body, author) VALUES (:title, :body, :author)';
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(['title' => $title, 'body' => $body, 'author' => $author]);
+    echo 'Post added!';
+
 
 ?>
 
