@@ -39,39 +39,22 @@
        echo $row->ingredient . '<br/>';
     }    
 
-    $stmt = $conn->prepare("INSERT INTO recipes (category, ingredient, quantityinstock, restocklevel, price) 
-    VALUES (:category, :ingredient, :quantityinstock, restocklevel, price)");
-        $stmt->bindParam(':category', $category);
-        $stmt->bindParam(':ingredient', $ingredient);
-        $stmt->bindParam(':quantityinstock', $quantityinstock);
-        $stmt->bindParam(':restocklevel', $restocklevel);
-        $stmt->bindParam(':price', $price);
+    $stmt = $conn->prepare("INSERT INTO test_table (id, name) VALUES (:id, :name)");
+        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':name', $name);
     
     // insert a row
-        $category = $_POST["category"];
-        $ingredient = $_POST["ingredient"];
-        $quantityinstock = $_POST["quantityinstock"];
-        $restocklevel = $_POST["restocklevel"];
-        $price = $_POST["price"];
+        $id = $_POST["id"];
+        $name = $_POST["name"];
         $stmt->execute();
     
-    
         echo "New records created successfully";
-
 
 ?>
 
 <html>
 <body>
 
-<form action="index.php" method="post">
-    category: <input type="text" name="category"><br>
-    ingredient: <input type="text" name="ingredient"><br>
-    quantity in stock: <input type="text" name="quantityinstock"><br>
-    restock level: <input type="text" name="restocklevel"><br>
-    price: <input type="text" name="price"><br>
-    <input type="submit">
-</form>
 
 </body>
 </html>

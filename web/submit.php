@@ -9,11 +9,8 @@
 <body>
   
 <form action="index.php" method="post">
-    category: <input type="text" name="category"><br>
-    ingredient: <input type="text" name="ingredient"><br>
-    quantity in stock: <input type="text" name="quantityinstock"><br>
-    restock level: <input type="text" name="restocklevel"><br>
-    price: <input type="text" name="price"><br>
+    id: <input type="number" name="id"><br>
+    name: <input type="text" name="name"><br>
     <input type="submit">
 </form>  
 </body>
