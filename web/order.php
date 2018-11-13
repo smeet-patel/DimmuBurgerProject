@@ -14,7 +14,7 @@
 	<!-- CSS
 			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/skeleton.css">
+	<!-- <link rel="stylesheet" href="css/skeleton.css"> -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
 	 crossorigin="anonymous">
@@ -26,11 +26,11 @@
 <body>
 	<div class="nav1" id="mynav1">
 		<!--Adding My logo to the left and always showing -->
-		<a href="index.html"><img src="images/dimmulogo.png" height="40"></a>
+		<a href="index.html">Dimmu Burger</a>
 		<!--Floating to the Left Side of the menu, the other pages-->
 		<a href="submit.php">Order</a>
-		<!--Shows menubutton when screen is small -->
-		<a href="javascript:void(0);" style="font-size:15px;" class="menubutton" onclick="myFunction()">&#9776;</a>
+		<!-- Shows menubutton when screen is small
+		<a href="javascript:void(0);" style="font-size:15px;" class="menubutton" onclick="myFunction()">&#9776;</a> -->
 	</div>
 	<br>
 	<!-- Primary Page Layout
@@ -38,7 +38,7 @@
 	<div class="sticky">
 		<!-- <div class="sticky"> -->
 		<table style="text-align:center;">
-			<Tr>
+			<tr>
 				<!-- <Td class="sideProgress"><button class="btn" id="Back" href="https://www.google.com">&lt;</button></td> -->
 				<td>
 					<ul id="progress-bar" class="progressbar">
@@ -55,7 +55,7 @@
 				</td>
 			<tr>
 				<td class="totalrow">
-					<div class="cen">Total Price <span id="totalPrice"></span></div>
+					<div class="cen">Total Price:&nbsp; <b><span id="totalPrice"></span></b></div>
 				</td>
 			</tr>
 			<!-- <Td class="sideProgress"><a href="#google"><button class="btn" onclick="change()" id="Next">&gt;</button></a></td> -->
@@ -65,11 +65,11 @@
 	<!-- </div> -->
 	<div class="containerWork">
 		<div id="mid">
-			<h1 id="bread">ORDER BURGER</h1>
+			<h1 id="bread" style="padding-bottom: 0.5em;">ORDER BURGER</h1>
 			<!-- Bread
 			    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 			<h2 class="w">Bread</h2>
-			<form action="ordered.php" method="post">
+			<form action="submit.php" method="post">
 				<table id="custom">
 					<tr id="Hov">
 						<td width="15%">
@@ -77,7 +77,7 @@
 						</td>
 						<td>
 							<div class="cenform">
-								<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Burger
+								<label class="conradio" >Burger
 									<input type="radio" name="Bread" value="Burger" onclick="mybread()" id="radio1">
 									<span class="checkradio"></span>
 								</label>
@@ -91,7 +91,7 @@
 						</td>
 						<td id="base1">
 							<div class="cenform">
-								<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);"> Jr Burger
+								<label class="conradio" > Jr Burger
 									<input type="radio" name="Bread" value="JrBurger" onclick="mybread()" id="radio2">
 									<span class="checkradio"></span>
 								</label>
@@ -105,7 +105,7 @@
 						</td>
 						<td>
 							<div class="cenform">
-								<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Tortillas
+								<label class="conradio" >Tortillas
 									<input type="radio" name="Bread" value="Tortillas" onclick="mybread()" id="radio3">
 									<span class="checkradio"></span>
 								</label>
@@ -125,7 +125,7 @@
 							</td>
 							<td>
 								<div class="cenform">
-									<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Chicken
+									<label class="conradio" >Chicken
 										<input type="radio" name="Base" value="Chicken" onclick="mybase()" id="radio4">
 										<span class="checkradio"></span>
 									</label>
@@ -139,7 +139,7 @@
 							</td>
 							<td>
 								<div class="cenform">
-									<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Beef
+									<label class="conradio" >Beef
 										<input type="radio" name="Base" value="Beef" onclick="mybase()" id="radio5">
 										<span class="checkradio"></span>
 									</label>
@@ -153,7 +153,7 @@
 							</td>
 							<td>
 								<div class="cenform">
-									<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Falafel
+									<label class="conradio" >Falafel
 										<input type="radio" name="Base" value="Falafel" onclick="mybase()" id="radio6">
 										<span class="checkradio"></span>
 									</label>
@@ -167,7 +167,7 @@
 							</td>
 							<td>
 								<div class="cenform">
-									<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Vege Tofu
+									<label class="conradio" >Vege Tofu
 										<input type="radio" name="Base" value="Tofu" onclick="mybase()" id="radio7">
 										<span class="checkradio"></span>
 									</label>
@@ -180,7 +180,7 @@
 							</td>
 							<td>
 								<div class="cenform">
-									<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw); color:red;">NONE
+									<label class="conradio" style="font-size:1.2em; color: #F90036">NONE
 										<input type="radio" name="Base" value="skip" onclick="mybase()" id="radio8">
 										<span class="checkradio"></span>
 									</label>
@@ -266,7 +266,7 @@
 							</td>
 							<td colspan="2">
 								<div class="cenform">
-									<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw); color:red;">NONE
+									<label class="conradio" style="font-size:1.2em; color: #F90036;">NONE
 										<input type="radio" name="" value="skip" onclick="skipchee()" id="radio9">
 										<span class="checkradio"></span>
 									</label>
@@ -415,7 +415,7 @@
 							</td>
 							<td colspan="2">
 								<div class="cenform">
-									<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw); color:red;">NONE
+									<label class="conradio" style="font-size:1.2em; color: #F90036;">NONE
 										<input type="radio" name="" value="skip" onclick="skipvege()" id="radio10">
 										<span class="checkradio"></span>
 									</label>
@@ -438,7 +438,7 @@
 							</td>
 							<td>
 								<div class="cenform">
-									<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Mayonnaise
+									<label class="conform" >Mayonnaise
 										<input type="checkbox" name="Sauce4" value="Mayonnaise" onclick="mayoT()" id="mayo">
 										<span class="checkmark"></span>
 									</label>
@@ -452,7 +452,7 @@
 							</td>
 							<td>
 								<div class="cenform">
-									<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">
+									<label class="conform" >
 										<p>Aioli</p>
 										<input type="checkbox" name="Sauce3" value="Aioli" onclick="aioliT()" id="aioli">
 										<span class="checkmark"></span>
@@ -467,7 +467,7 @@
 							</td>
 							<td>
 								<div class="cenform">
-									<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Curry Sauce
+									<label class="conform" >Curry Sauce
 										<input type="checkbox" name="Sauce1" value="Curry" onclick="curryT()" id="curry">
 										<span class="checkmark"></span>
 									</label>
@@ -481,7 +481,7 @@
 							</td>
 							<td>
 								<div class="cenform">
-									<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Italian Dressing
+									<label class="conform" >Italian Dressing
 										<input type="checkbox" name="Sauce2" value="Italian" onclick="itaT()" id="ita">
 										<span class="checkmark"></span>
 									</label>
@@ -495,7 +495,7 @@
 							</td>
 							<td>
 								<div class="cenform">
-									<label class="conform" style="font-size:calc(12px + 1.5vw);top:calc(1vw);">Tomato Sauce
+									<label class="conform" >Tomato Sauce
 										<input type="checkbox" name="Sauce" value="tomatosauce" onclick="hotcT()" id="hotc">
 										<span class="checkmark"></span>
 									</label>
@@ -508,7 +508,7 @@
 							</td>
 							<td>
 								<div class="cenform">
-									<label class="conradio" style="font-size:calc(12px + 1.5vw);top:calc(1vw); color:red;">NONE
+									<label class="conradio" style="font-size:1.2em; color: #F90036">NONE
 										<input type="radio" name="" value="skip" onclick="skipsau()" id="radio10">
 										<span class="checkradio"></span>
 									</label>
@@ -530,7 +530,7 @@
 							<td>
 								<!-- <input type="radio" name="1" value="1" id="radio1" style="display: none"> -->
 								<div class="cen"><input type="submit" class="btnSub" name="newburger" value="Proceed with order"
-									 style=" color: red;font-size: calc(12px + 1.5vw);margin: 5px;padding-left: 1em;padding-right: 1em;padding-bottom: 1em;cursor: pointer;" /></div>
+									 style=" color: #010E1E;font-size: 1.5em;margin: 5px;padding-left: 1em;padding-right: 1em;padding-bottom: 1em;cursor: pointer;" /></div>
 								<!-- <div class="cen"><button class="btnSub" id="Another">Order Another Burger</button></div> -->
 							</td>
 						</tr>
