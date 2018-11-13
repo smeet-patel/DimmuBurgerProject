@@ -17,7 +17,7 @@
         echo "Connected";
 
         $stmt = $conn->prepare("INSERT INTO recipes (paneer, tomato, lettuce, capsicum, onion, pineapple, carrot, avocado, pickles, cheddar, swiss, halloumi)
-        VALUES (:paneer, :tomato, :lettuce, :capsicum, :oinon, :pineapple, :carrot, :avocado, :pickles, :cheddar, :swiss, :halloumi)");
+        VALUES (:paneer, :tomato, :lettuce, :capsicum, :onion, :pineapple, :carrot, :avocado, :pickles, :cheddar, :swiss, :halloumi)");
         $stmt->bindParam(':paneer', $Paneer);
         $stmt->bindParam(':tomato', $Tomato);
         $stmt->bindParam(':lettuce', $Lettuce);
