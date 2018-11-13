@@ -180,7 +180,7 @@
 							</td>
 							<td>
 								<div class="cenform">
-									<label class="conradio" style="font-size:1.2em; color: #F90036">NONE
+									<label class="conradio" style="font-size:1em; color: #F90036">NONE
 										<input type="radio" name="Base" value="skip" onclick="mybase()" id="radio8">
 										<span class="checkradio"></span>
 									</label>
@@ -266,7 +266,7 @@
 							</td>
 							<td colspan="2">
 								<div class="cenform">
-									<label class="conradio" style="font-size:1.2em; color: #F90036;">NONE
+									<label class="conradio" style="font-size:1em; color: #F90036;">NONE
 										<input type="radio" name="" value="skip" onclick="skipchee()" id="radio9">
 										<span class="checkradio"></span>
 									</label>
@@ -415,7 +415,7 @@
 							</td>
 							<td colspan="2">
 								<div class="cenform">
-									<label class="conradio" style="font-size:1.2em; color: #F90036;">NONE
+									<label class="conradio" style="font-size:1em; color: #F90036;">NONE
 										<input type="radio" name="" value="skip" onclick="skipvege()" id="radio10">
 										<span class="checkradio"></span>
 									</label>
@@ -508,7 +508,7 @@
 							</td>
 							<td>
 								<div class="cenform">
-									<label class="conradio" style="font-size:1.2em; color: #F90036">NONE
+									<label class="conradio" style="font-size:1em; color: #F90036">NONE
 										<input type="radio" name="" value="skip" onclick="skipsau()" id="radio10">
 										<span class="checkradio"></span>
 									</label>
