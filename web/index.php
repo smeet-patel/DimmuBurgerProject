@@ -24,6 +24,16 @@
     while ($row = pg_fetch_row($result)) {
         var_dump($row);
     }
+
+    $query = pg_query($dbconnect, "SELECT * FROM recipes")
+    or die (pg_error($dbconnect));
+
+    while ($row = pg_fetch_array($query)) {
+    echo
+    "<div><h4>{$row['burgername']}</h4></div>";
+    }
+    ?>
+
 ?>
 
 </body>
