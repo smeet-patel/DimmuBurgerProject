@@ -19,19 +19,18 @@
         echo "Connected!";
     }
 
-    $query = mysqli_query($dbconnect, "SELECT ''burgername FROM recipes")
+    $query = mysqli_query($dbconnect, "SELECT * FROM ingredients")
     or die (mysqli_error($dbconnect));
 
     while ($row = mysqli_fetch_array($query)) {
     echo
-    "<h4>{$row['burgername']}</h4>";
+    "<h4>{$row['ingredient']}</h4>";
     }
     ?>
 
 ?>
 <p>This is the main page</p>
 <p>burger name</p>
-=
 
 </body>
 </html>
