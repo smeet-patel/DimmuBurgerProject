@@ -17,9 +17,10 @@
 
     $stat = "";
 
-    $stmt3 = $conn->prepare("SELECT count(*) FROM orders WHERE burgerstate like 'new'");
-    $stmt3->execute([$burgerstate]);
-    $stat = $stmt3->fetchColumn();
+    $q = $dbc->prepare("SELECT COUNT(id) as records FROM orders WHERE orderstate LIKE 'new'");
+    $q->execute(array($orderstate)); 
+
+    $stat = (int) ($q->rowCount()) ? $q->fetch(PDO::FETCH_OBJ)->records : 0;
 
     echo $stat;
 ?>
