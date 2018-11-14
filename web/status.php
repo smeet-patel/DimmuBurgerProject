@@ -19,7 +19,7 @@
 
     $stmt3 = $conn->prepare("SELECT count(*) FROM orders WHERE burgerstate like 'new'");
     $stmt3->execute([$burgerstate]);
-    $count = $stmt3->fetchColumn();
+    $stat = $stmt3->fetchColumn();
 
     echo $stat;
 ?>
