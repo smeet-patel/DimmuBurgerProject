@@ -15,6 +15,8 @@
 
     $q = $_REQUEST['q'];
 
+    $q = "Changed String";
+
     $stmt3 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
 
     $stats = 0;

@@ -9,7 +9,9 @@
         // create http object to create get request on certain page
         // status 200 means everything is ok.
         // ready state 4 means request is made and ready
-        var str = document.getElementById("orNum").innerHTML;
+        // var str = document.getElementById("orNum").innerHTML;
+
+        var str = "String";
 
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
