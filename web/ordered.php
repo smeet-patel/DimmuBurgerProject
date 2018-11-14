@@ -209,7 +209,6 @@
         <br/>
     </div>
     <script>
-        console.log("Ajax");
         var intervalID = window.setInterval(showSuggestion, 2000);
 
         function showSuggestion(){
@@ -217,7 +216,14 @@
         // create http object to create get request on certain page
         // status 200 means everything is ok.
         // ready state 4 means request is made and ready
+
             var str = document.getElementById("orNum").innerHTML;
+            var stored = str;
+            // Local session storage
+            if (typeof(Storage) !== "undefined") { 
+                localStorage.setItem("orderNumber", stored); var str = localStorage.getItem("orderNumber"); 
+            }
+            
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
