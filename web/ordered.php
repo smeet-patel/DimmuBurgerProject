@@ -200,13 +200,13 @@
                 }
 
                 $orderstate = '0';
+                echo $orderstate;
 
                 $sql = 'SELECT * FROM orders WHERE orderstate = :orderstate';
                 $stmt4 = $pdo->prepare($sql);
                 $stmt4->execute(['orderstate' => $orderstate]);
-                $post = $stmt4->fetch();
+                echo $stmt4->fetch();
 
-                echo 'Order State: ' . $post;
 
             ?>
         
