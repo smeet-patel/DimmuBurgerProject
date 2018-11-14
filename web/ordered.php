@@ -176,6 +176,32 @@
 	<!-- Favicon
 			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<link rel="icon" type="images/png" href="images/DB.png">
+    <script>
+        console.log("Ajax");
+        var intervalID = window.setInterval(showSuggestion, 2000);
+
+        function showSuggestion(){
+        // AJAX REQUEST
+        // create http object to create get request on certain page
+        // status 200 means everything is ok.
+        // ready state 4 means request is made and ready
+        // var str = document.getElementById("orNum").innerHTML;
+
+            var str = "String";
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById('output').innerHTML = this.responseText;
+                }
+            };
+
+            xmlhttp.open("GET", "status.php?+q=", true);
+            xmlhttp.send();   
+        }     
+        
+    </script>
+
 </head>
 
 <body>
@@ -209,32 +235,6 @@
     <?php
         $conn = null;
     ?>
-
-    <script>
-        console.log("Ajax");
-        var intervalID = window.setInterval(showSuggestion, 2000);
-
-        function showSuggestion(){
-        // AJAX REQUEST
-        // create http object to create get request on certain page
-        // status 200 means everything is ok.
-        // ready state 4 means request is made and ready
-        // var str = document.getElementById("orNum").innerHTML;
-
-            var str = "String";
-
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById('output').innerHTML = this.responseText;
-                }
-            };
-
-            xmlhttp.open("GET", "status.php?+q=", true);
-            xmlhttp.send();   
-        }     
-        
-    </script>
     <script type="text/javascript" src="javascript/script.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<!-- <script src='javascript/bootstrap.min.js'></script> -->
