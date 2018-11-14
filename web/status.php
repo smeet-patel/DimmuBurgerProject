@@ -26,16 +26,15 @@
 
 
 
-    $stmt4 = 'select orderstate as orderstate from orders WHERE ordernumber = :ordernumber';
+    $sql = 'select * from orders WHERE ordernumber = :ordernumber';
     
-    $update = $conn -> prepare($stmt4);
-    $update -> bindParam(':ordernumber', (int) $onum);
+    // $update = $conn -> prepare($stmt4);
+    // $update -> bindParam(':ordernumber', $onum);
 
-    while($row = $update->fetch(PDO::FETCH_ASSOC)){
-        $stats = $row['orderstate'];
-    }
+    $stmt = $conn->prepare($sql);
+    $stmt->execute(['ordernumber' => $onum]);
+    $stats = $stmt->fetch();
 
-
-    echo "Order Number: " . $onum . "<br>Status: ". $stats; 
+    echo "Order Number: " . $onum . "<br>Status: ". $stats->orderstate; 
 
 ?>
