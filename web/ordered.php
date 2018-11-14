@@ -105,13 +105,6 @@
 
         $stmt->execute();
 
-        echo "New records created successfully";
-
-
-        $stmt1 = $conn->query('SELECT * FROM orders');
-
-
-        $stmt1->execute();
 
 
         $stmt2 = $conn->query('SELECT MAX(burgername) AS ordernumber FROM recipes');
@@ -170,7 +163,13 @@
 		<div id="mid">
 			<h1 id="bread" style="padding-bottom: 0.5em;">ORDER STATUS:</h1>
             <?php
-                echo "Your order Number is...";
+                If(isset($_POST['newburger'])){
+                    $stmt2 = $conn->query('SELECT MAX(burgername) AS ordernumber FROM recipes');
+
+                    while($row = $stmt2->fetch(PDO::FETCH_ASSOC)){
+                        echo '<p>Order: ' . $row['ordernumber'] . '<p><br>';
+                    }
+                }
 
             ?>
 	    </div>
