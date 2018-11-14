@@ -38,7 +38,7 @@
 	<div class="sticky">
 		<!-- <div class="sticky"> -->
 		<table style="text-align:center;">
-			<tr>
+			<Tr>
 				<!-- <Td class="sideProgress"><button class="btn" id="Back" href="https://www.google.com">&lt;</button></td> -->
 				<td>
 					<ul id="progress-bar" class="progressbar">
@@ -55,13 +55,14 @@
 				</td>
 			<tr>
 				<td class="totalrow">
-					<div class="cen">Total Price:&nbsp; <b><span id="totalPrice"></span></b></div>
+					<div class="cen">Total Price <span id="totalPrice"></span></div>
 				</td>
 			</tr>
 			<!-- <Td class="sideProgress"><a href="#google"><button class="btn" onclick="change()" id="Next">&gt;</button></a></td> -->
 			</tr>
 		</table>
 	</div>
+
 	<!-- </div> -->
 	<div class="containerWork">
 		<div id="mid">
@@ -396,7 +397,7 @@
 						</tr>
 						<tr id="Hov">
 							<td width="15%">
-								<div class="cen"><img src="ingredients_icons/extras/pineapple.png" class="icon"></div>
+								<div class="cen"><img src="ingredients_icons/extras/pickel.png" class="icon"></div>
 							</td>
 							<td width="30%">
 								<div class="cen">
@@ -434,7 +435,7 @@
 					<table id="custom">
 						<tr id="Hov">
 							<td width="15%">
-								<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+								<div class="cen"><img src="ingredients_icons/sauce/mayo_sau.png" class="icon"></div>
 							</td>
 							<td>
 								<div class="cenform">
@@ -448,7 +449,7 @@
 						</tr>
 						<tr id="Hov">
 							<td width="15%">
-								<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+								<div class="cen"><img src="ingredients_icons/sauce/ali_sau.png" class="icon"></div>
 							</td>
 							<td>
 								<div class="cenform">
@@ -463,7 +464,7 @@
 						</tr>
 						<tr id="Hov">
 							<td width="15%">
-								<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+								<div class="cen"><img src="ingredients_icons/sauce/curry_sau.png" class="icon"></div>
 							</td>
 							<td>
 								<div class="cenform">
@@ -477,7 +478,7 @@
 						</tr>
 						<tr id="Hov">
 							<td width="15%">
-								<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+								<div class="cen"><img src="ingredients_icons/sauces/ita_sau.png" class="icon"></div>
 							</td>
 							<td>
 								<div class="cenform">
@@ -491,7 +492,7 @@
 						</tr>
 						<tr id="Hov">
 							<td width="15%">
-								<div class="cen"><img src="ingredients_icons/produce/tomato.png" class="icon"></div>
+								<div class="cen"><img src="ingredients_icons/sauces/tom_sau.png" class="icon"></div>
 							</td>
 							<td>
 								<div class="cenform">

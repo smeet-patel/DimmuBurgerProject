@@ -61,8 +61,7 @@
                 </tr>
               </table>
               <p style="font-size: 20px; color: crimson;">Create your personalised burger with a range of fresh and premium
-                New Zealand ingredients
-                for the best-personalised experience with Dimmu Burgers Create your range. Dimmu is named after Norwegian
+                New Zealand ingredients for the best-personalised experience with Dimmu Burgers Create your range. Dimmu is named after Norwegian
                 rock band.
               </p>
               <!-- <h1>Dimmu Burger</h1>
