@@ -153,7 +153,6 @@
     }    
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -222,17 +221,18 @@
         // ready state 4 means request is made and ready
         // var str = document.getElementById("orNum").innerHTML;
 
-        var str = "String";
+            var str = "String";
 
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById('output').innerHTML = this.responseText;
-            }
-        };
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById('output').innerHTML = this.responseText;
+                }
+            };
 
-        xmlhttp.open("GET", "status.php?+q=", true);
-        xmlhttp.send();        
+            xmlhttp.open("GET", "status.php?+q=", true);
+            xmlhttp.send();   
+        }     
         
     </script>
     <script type="text/javascript" src="javascript/script.js"></script>
