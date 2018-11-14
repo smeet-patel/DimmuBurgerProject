@@ -231,7 +231,7 @@
             }
         };
 
-        xmlhttp.open("GET", "status.php?+q=" + str, true);
+        xmlhttp.open("GET", "status.php?+q=", true);
         xmlhttp.send();        
         
     </script>
