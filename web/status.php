@@ -17,8 +17,8 @@
 
     $stmt3 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
 
-    $stats = "";
-    $onum = "";
+    $stats = 0;
+    $onum = 0;
 
     while($row = $stmt3->fetch(PDO::FETCH_ASSOC)){
         $onum = $row['ordernumber'];
@@ -29,7 +29,7 @@
     $stmt4 = 'select orderstate as orderstate from orders WHERE ordernumber = :ordernumber';
     
     $update = $conn -> prepare($stmt4);
-    $update -> bindParam(':ordernumber', $onum);
+    $update -> bindParam(':ordernumber', (int) $onum);
 
     while($row = $update->fetch(PDO::FETCH_ASSOC)){
         $stats = $row['orderstate'];
