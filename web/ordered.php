@@ -189,12 +189,10 @@
 		<div id="mid" style="height: auto; padding-bottom: 50px">
             <h1 id="bread" style="padding-bottom: 0.5em;">ORDER STATUS:</h1>
             <?php
-                If(isset($_POST['newburger'])){
-                    $stmt6 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
+                $stmt6 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
 
-                    while($row = $stmt6->fetch(PDO::FETCH_ASSOC)){
-                        echo "<p style=\"font-size: 1.2em\">Order Number: <b><span id=\"orNum\">" . $row['ordernumber'] . "</b></span></p>";
-                    }
+                while($row = $stmt6->fetch(PDO::FETCH_ASSOC)){
+                    echo "<p style=\"font-size: 1.2em\">Order Number: <b><span id=\"orNum\">" . $row['ordernumber'] . "</b></span></p>";
                 }
             ?>
             <div class="container">
@@ -220,11 +218,6 @@
         // ready state 4 means request is made and ready
 
             var str = document.getElementById("orNum").innerHTML;
-            //var stored = str;
-            // Local session storage
-            // if (typeof(Storage) !== "undefined") { 
-            //     localStorage.setItem("orderNumber", stored); var str = localStorage.getItem("orderNumber"); 
-            // }
             
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
