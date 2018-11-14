@@ -106,18 +106,30 @@
         $stmt->execute();
 
 
-
         $stmt2 = $conn->query('SELECT MAX(burgername) AS ordernumber FROM recipes');
 
         while($row = $stmt2->fetch(PDO::FETCH_ASSOC)){
             echo '<p>Order ' . $row['ordernumber'] . '<p><br>';
         }
+
+
+        $stmt3 = $conn->prepare("INSERT INTO orders (title, body, author)
+        VALUES (:title, :body, :author)");
+        $stmt3->bindParam(':title', $title);
+        $stmt3->bindParam(':body', $body);
+        $stmt3->bindParam(':author', $author);
+    
+        $title = $_POST['title'];
+        $body = $_POST['body'];
+        $author = $_POST['author'];
+        $stmt->execute();
+        echo "New records created successfully";        
             
 
     }catch(PDOException $e){
     echo "Error: " . $e->getMessage();
     }
-    $conn = null;
+    
     }    
 
 ?>
@@ -163,14 +175,14 @@
 		<div id="mid">
 			<h1 id="bread" style="padding-bottom: 0.5em;">ORDER STATUS:</h1>
             <?php
-                If(isset($_POST['newburger'])){
-                    $stmt2 = $conn->query('SELECT MAX(burgername) AS ordernumber FROM recipes');
 
-                    while($row = $stmt2->fetch(PDO::FETCH_ASSOC)){
-                        echo '<p>Order: ' . $row['ordernumber'] . '<p><br>';
-                    }
+                $stmt2 = $conn->query('SELECT MAX(burgername) AS ordernumber FROM recipes');
+
+                while($row = $stmt2->fetch(PDO::FETCH_ASSOC)){
+                    echo '<p>Order: ' . $row['ordernumber'] . '<p><br>';
                 }
 
+                $conn = null;
             ?>
 	    </div>
 	</div>
