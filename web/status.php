@@ -15,6 +15,8 @@
 
     $q = $_REQUEST['q'];
 
+    $m = $q;
+
     $stmt3 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
 
     $stats = 0;
@@ -33,6 +35,6 @@
     $stmt->execute(['ordernumber' => $onum]);
     $stats = $stmt->fetch();
 
-    echo "Order Number: <b>" . $onum . "</b>" . "<br>Status: <b>". $stats->orderstate . "</b>" .$q; 
+    echo "Order Number: <b>" . $onum . "</b>" . "<br>Status: <b>". $stats->orderstate . "</b>" .$m; 
 
 ?>
