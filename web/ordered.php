@@ -122,7 +122,7 @@
         $sql = 'INSERT INTO orders(ordernumber, subordernumber, orderstate) VALUES(:ordernumber, :subordernumber, :orderstate)';
         $stmtA = $conn->prepare($sql);
         $stmtA->execute(['ordernumber' => $ordernumber, 'subordernumber' => $suborder, 'orderstate' => $orderstate]);
-        echo 'Order Added';        
+        // echo 'Order Added';        
 
         // $stmt3 = $conn->prepare("INSERT INTO orders (ordernumber, burgernumber, orderstate)
         // VALUES (:ordernumber, :burgernumber, :orderstate)");
@@ -198,6 +198,22 @@
                 while($row = $stmt3->fetch(PDO::FETCH_ASSOC)){
                     echo '<p>Your order number is <b>' . $row['ordernumber'] . '</b></p>';
                 }
+            ?>
+
+            <h4 style="font-family: mathison">Your order status is:</h4>
+            <form action="ordered.php" method="post">
+                <input type="submit" value=" Submit " name="status"/><br />
+            </form>            
+
+            <?php 
+            
+                 If(isset($_POST['status'])){
+                    $stmt4 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
+
+                    while($row = $stmt4->fetch(PDO::FETCH_ASSOC)){
+                        echo '<p>Your order status is <b>' . $row['orderstatus'] . '</b></p>';
+                    }
+                 }
 
                 $conn = null;
             ?>
