@@ -199,20 +199,15 @@
                 while($row = $stmt3->fetch(PDO::FETCH_ASSOC)){
                     echo '<p>Your order number is <b>' . $row['ordernumber'] . '</b></p>';
                 }
-
-
-
             ?>
         
-
 	    </div>
-	</div>
+    </div>
+    <script src="javascript/script.js" defer></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<!-- <script src='javascript/bootstrap.min.js'></script> -->
 	<script src='javascript/jquery.min.js'></script>
-    <script src="javascript/script.js" defer></script>
-    <script src="javascript/script1.js" defer></script>
-    <script src="javascript/script2.js" defer></script>
+    
 </body>
 
 </html>

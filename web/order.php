@@ -478,7 +478,7 @@
 						</tr>
 						<tr id="Hov">
 							<td width="15%">
-								<div class="cen"><img src="ingredients_icons/sauces/ita_sau.png" class="icon"></div>
+								<div class="cen"><img src="ingredients_icons/sauce/ita_sau.png" class="icon"></div>
 							</td>
 							<td>
 								<div class="cenform">
@@ -492,7 +492,7 @@
 						</tr>
 						<tr id="Hov">
 							<td width="15%">
-								<div class="cen"><img src="ingredients_icons/sauces/tom_sau.png" class="icon"></div>
+								<div class="cen"><img src="ingredients_icons/sauce/tom_sau.png" class="icon"></div>
 							</td>
 							<td>
 								<div class="cenform">
@@ -522,11 +522,11 @@
 				<br>
 				<div id="subhide" style="display: none;">
 					<table id="custom noHov">
-						<tr>
+						<!-- <tr>
 							<td>
 								<div class="cen"><button class="btnSub" id="Order" name="">Order Another Burger</button></div>
 							</td>
-						</tr>
+						</tr> -->
 						<tr>
 							<td>
 								<!-- <input type="radio" name="1" value="1" id="radio1" style="display: none"> -->

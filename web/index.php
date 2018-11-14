@@ -49,14 +49,8 @@
               <table>
                 <tr>
                   <td width="50%">
-                    <div class="cen"><button class="btnSub" id="Order" width="300px" onclick="location.href='http://www.google.com'">Order
+                    <div class="cen"><button class="btnSub" id="Order" width="300px" onclick="location.href='order.php'">Order
                         NOW</button></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td width="50%">
-                    <div class="cen"><button class="btnSub" id="Order" width="300px" onclick="location.href='http://www.example.com'">Check
-                        your order</button></div>
                   </td>
                 </tr>
               </table>
