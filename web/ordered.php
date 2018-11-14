@@ -186,9 +186,6 @@
         // status 200 means everything is ok.
         // ready state 4 means request is made and ready
         // var str = document.getElementById("orNum").innerHTML;
-
-            var str = "String";
-
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -219,12 +216,7 @@
 	<div class="containerWork">
 		<div id="mid" style="height: auto; padding-bottom: 50px">
             <h1 id="bread" style="padding-bottom: 0.5em;">ORDER STATUS:</h1>
-            <?php 
-                $stmt2 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
-                while($row = $stmt2->fetch(PDO::FETCH_ASSOC)){
-                    echo "<p>Your order number is: <span id=\"orNum\">" . $row['ordernumber'] . "</span> </p>";
-                }            
-            ?>
+
             <div class="container">
                 <p style="font-size: 1.2em; line-height: 1.6em"><span id="output"></span></p>
             </div>            
