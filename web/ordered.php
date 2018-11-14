@@ -116,7 +116,7 @@
         }
 
         $ordernumber = $tem;
-        $suborder = '2';
+        $suborder = $tem;
         $orderstate = 'new';
 
         $sql = 'INSERT INTO orders(ordernumber, subordernumber, orderstate) VALUES(:ordernumber, :subordernumber, :orderstate)';
@@ -193,12 +193,11 @@
 		<div id="mid">
 			<h1 id="bread" style="padding-bottom: 0.5em;">ORDER STATUS:</h1>
             <?php
+                $stmt3 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
 
-                // $stmt2 = $conn->query('SELECT MAX(burgername) AS ordernumber FROM recipes');
-
-                // while($row = $stmt2->fetch(PDO::FETCH_ASSOC)){
-                //     echo '<p>Order: ' . $row['ordernumber'] . '<p><br>';
-                // }
+                while($row = $stmt3->fetch(PDO::FETCH_ASSOC)){
+                    echo '<p>Your order number is <b>' . $row['ordernumber'] . '</b></p>';
+                }
 
                 $conn = null;
             ?>
