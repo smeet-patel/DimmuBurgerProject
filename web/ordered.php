@@ -104,15 +104,22 @@
 
 
         $stmt->execute();
+
         echo "New records created successfully";
+
+
         $stmt1 = $conn->query('SELECT * FROM orders');
-        while($row = $stmt1->fetch(PDO::FETCH_ASSOC)){
-            echo $row['ordernumber'] . '<br>';
-        }
+
 
         $stmt1->execute();
 
 
+        $stmt2 = $conn->query('SELECT MAX(burgername) AS ordernumber FROM recipes');
+
+        while($row = $stmt2->fetch(PDO::FETCH_ASSOC)){
+            echo '<p>Order ' . $row['ordernumber'] . '<p><br>';
+        }
+            
 
     }catch(PDOException $e){
     echo "Error: " . $e->getMessage();
