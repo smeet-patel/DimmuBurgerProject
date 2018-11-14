@@ -615,6 +615,7 @@ output12.innerHTML = slider12.value;
 slider12.oninput = function () {
   output12.innerHTML = this.value;
   if (this.value == 1) {
+    saucesdisplay();
     price12.innerHTML = "$" + parseFloat((-.1 * this.value) + 0.6).toFixed(2);
     pp12 = parseFloat((-.1 * this.value) + 0.6).toFixed(2);
   } else if (this.value == 2) {
