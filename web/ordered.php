@@ -13,6 +13,7 @@
             ltrim($db["path"], "/")
         ));
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
         // echo "Connected";
 
@@ -166,15 +167,18 @@
                 $orderstate = "new";
 
                 $stmt3 = $conn->prepare("INSERT INTO orders (ordernumber, burgernumber, orderstate)
-                VALUES (:ordernumber, :burgernumber, :burger)");
+                VALUES (:ordernumber, :burgernumber, :orderstate)");
                 $stmt3->bindParam(':ordernumber', $ordernumber);
                 $stmt3->bindParam(':burgernumber', $burgernumber);
-                $stmt3->bindParam(':burger', $burger);
+                $stmt3->bindParam(':orderstate', $orderstate);
             
-                
                 $stmt3->execute();
-                echo "New records created successfully";   
+                echo 'New order created successfully ';   
 
+                $stmt4 = $conn->query('SELECT * FROM orders');
+                while($row = $stmt4->fetch()){
+                    echo $row->ordernumber . '<br/>';
+                }    
 
                 $conn = null;
             ?>
