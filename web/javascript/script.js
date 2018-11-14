@@ -135,14 +135,14 @@ function skipchee() {
 }
 
 function skipvege() {
-  saucesdisplay();
+  // saucesdisplay();
   vege = true;
   countvege = countvege + 1;
   Nextvege();
 }
 
 function skipsau() {
-  subsdisplay();
+  // subsdisplay();
   sauce = true;
   countsauce = countsauce + 1;
   Nextsauce();
@@ -252,7 +252,6 @@ function mayoT() {
   totalp();
   countsauce = countsauce + 1;
   Nextsauce();
-  subsdisplay();
 }
 
 var checkBox2 = document.getElementById("aioli");
@@ -270,7 +269,6 @@ function aioliT() {
   totalp();
   countsauce = countsauce + 1;
   Nextsauce();
-  subsdisplay();
 }
 
 var checkBox3 = document.getElementById("curry");
@@ -288,7 +286,6 @@ function curryT() {
   totalp();
   countsauce = countsauce + 1;
   Nextsauce();
-  subsdisplay();
 }
 
 var checkBox4 = document.getElementById("hotc");
@@ -306,7 +303,6 @@ function hotcT() {
   totalp();
   countsauce = countsauce + 1;
   Nextsauce();
-  subsdisplay();
 }
 
 var checkBox5 = document.getElementById("ita");
@@ -324,7 +320,6 @@ function itaT() {
   totalp();
   countsauce = countsauce + 1;
   Nextsauce();
-  subsdisplay();
 }
 
 var slider1 = document.getElementById("myche");
@@ -638,11 +633,11 @@ slider12.oninput = function () {
   Nextvege();
 }
 
-function vegecheck() {
-  if (pp5 > 0 || pp6 > 0 || pp7 > 0 || pp8 > 0 || pp9 > 0 || pp10 > 0 || pp11 > 0 || pp12 > 0) {
-    saucesdisplay();
-  }
-}
+// function vegecheck() {
+//   if (pp5 > 0 || pp6 > 0 || pp7 > 0 || pp8 > 0 || pp9 > 0 || pp10 > 0 || pp11 > 0 || pp12 > 0) {
+//     saucesdisplay();
+//   }
+// }
 var totalid = document.getElementById("totalPrice");
 
 function totalp() {
