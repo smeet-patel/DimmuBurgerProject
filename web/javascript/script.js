@@ -30,13 +30,16 @@ function Nextchee() {
 }
 
 function Nextvege() {
+  
   if (vege == true && countvege == 1) {
+    saucesdisplay();
     progressBar.Next();
   }
 }
 
 function Nextsauce() {
   if (vege == true && countvege == 1) {
+    subsdisplay();
     progressBar.Next();
   }
 }
