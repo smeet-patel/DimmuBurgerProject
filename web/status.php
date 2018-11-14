@@ -30,6 +30,6 @@
         $stats = $row['orderstate'];
     }
 
-    echo $stats; 
+    echo "Order Number: " . $onum . "<br>Status: ". $stats; 
 
 ?>
