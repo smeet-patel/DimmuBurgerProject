@@ -35,6 +35,6 @@
     $stmt->execute(['ordernumber' => $m]);
     $stats = $stmt->fetch();
 
-    echo "Order Number: <b>" . $m . "</b>" . "<br>Status: <b>". $stats->orderstate . "</b>"; 
+    echo "Status: <b>". $stats->orderstate . "</b>"; 
 
 ?>

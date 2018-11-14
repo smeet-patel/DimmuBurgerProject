@@ -192,7 +192,7 @@
                 $stmt6 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
 
                 while($row = $stmt6->fetch(PDO::FETCH_ASSOC)){
-                    echo "<p id=\"orNum\">" . $row['ordernumber'] . "</p>";
+                    echo "<p style=\"font-size: 1.2em\">Order Number: <b><span id=\"orNum\">" . $row['ordernumber'] . "</b></span></p>";
                 }
             ?>
             <div class="container">
