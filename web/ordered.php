@@ -189,10 +189,12 @@
 		<div id="mid" style="height: auto; padding-bottom: 50px">
             <h1 id="bread" style="padding-bottom: 0.5em;">ORDER STATUS:</h1>
             <?php
-                $stmt6 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
+                If(isset($_POST['newburger'])){
+                    $stmt6 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
 
-                while($row = $stmt6->fetch(PDO::FETCH_ASSOC)){
-                    echo "<p style=\"font-size: 1.2em\">Order Number: <b><span id=\"orNum\">" . $row['ordernumber'] . "</b></span></p>";
+                    while($row = $stmt6->fetch(PDO::FETCH_ASSOC)){
+                        echo "<p style=\"font-size: 1.2em\">Order Number: <b><span id=\"orNum\">" . $row['ordernumber'] . "</b></span></p>";
+                    }
                 }
             ?>
             <div class="container">
