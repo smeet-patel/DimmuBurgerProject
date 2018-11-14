@@ -270,6 +270,7 @@ th {
     list-style-type: none;
     width: 20%;
     float: left;
+    left: -20px;
     font-size: 12px;
     position: relative;
     text-align: center;
