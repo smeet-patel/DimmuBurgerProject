@@ -62,7 +62,7 @@
 			</tr>
 		</table>
 	</div>
-
+	<br/>
 	<!-- </div> -->
 	<div class="containerWork">
 		<div id="mid">
@@ -527,6 +527,13 @@
 								<div class="cen"><button class="btnSub" id="Order" name="">Order Another Burger</button></div>
 							</td>
 						</tr> -->
+						<tr>
+							<td>
+								<div class="cen">
+									<input type="email" class="loginInput" name="Email" placeholder="Email" />
+								</div>
+							</td>
+						</tr>
 						<tr>
 							<td>
 								<!-- <input type="radio" name="1" value="1" id="radio1" style="display: none"> -->

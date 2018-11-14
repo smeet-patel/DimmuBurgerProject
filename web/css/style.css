@@ -574,7 +574,17 @@ label {
     border-radius: 50%;
     background: #ff8800;
     cursor: pointer;
-
 }
+
+.loginInput { /* Input text fields for login page */
+    border: none;
+    border-bottom: 1px solid #CCCCCC;
+    background-color: white;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 10px;
+    width: 400px;
+  }
 
 /* ------------------------------------*/
