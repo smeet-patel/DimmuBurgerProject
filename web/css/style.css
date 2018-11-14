@@ -89,7 +89,6 @@ body {
     position: relative;
     border-radius: 10px;
     padding: 20px;
-    padding-right: 20px;
     margin: auto;
 }
 
@@ -126,7 +125,7 @@ h1 {
 
 
 .containerWork {
-    margin: 1.5em auto;
+    margin: 0 auto;
     max-width: 1200px;
 }
 
@@ -211,7 +210,7 @@ table {
 
 td {
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.1em;
     margin-left: auto;
     margin-right: auto;
     /* border: 1px solid black; */
@@ -430,7 +429,7 @@ input[type=submit] {
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #416D99;
+    background-color: #FFD37B;
     border-radius: 50%;
 }
 
@@ -445,7 +444,7 @@ label {
 
 /* When the radio button is checked, add a blue background */
 .conradio input:checked~.checkradio {
-    background-color: #0322FF;
+    background-color: #FF8800;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */

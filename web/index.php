@@ -32,7 +32,6 @@
 		<!-- Shows menubutton when screen is small
 		<a href="javascript:void(0);" style="font-size:15px;" class="menubutton" onclick="myFunction()">&#9776;</a> -->
 	</div>
-	<br>
 	<!-- Primary Page Layout
 			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 			<div class="containerWork">
