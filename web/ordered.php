@@ -113,7 +113,7 @@
 
         $sql = 'INSERT INTO orders(ordernumber, burger, orderstate) VALUES(:ordernumber, :burger, :orderstate)';
         $stmtA = $conn->prepare($sql);
-        $stmtA->execute(['ordernumber' => $ordernumber, 'burger' => $burgernumber, 'author' => $orderstate]);
+        $stmtA->execute(['ordernumber' => $ordernumber, 'burger' => $burgernumber, 'orderstate' => $orderstate]);
         echo 'Order Added';        
 
         // $stmt3 = $conn->prepare("INSERT INTO orders (ordernumber, burgernumber, orderstate)
