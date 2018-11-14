@@ -1,5 +1,3 @@
-$("[name='Email']").prop("required", true);
-
 var sauce$ = .2;
 var jrburger$ = 2.5;
 var wrap$ = 3;
@@ -86,21 +84,21 @@ var pp20 = 0;
 
 function mybread() {
   if (radio1.checked == true) {
-    price18.innerHTML = "$" + parseFloat(burger$).toFixed(2);
+    price18.innerHTML = "$" + (burger$).toFixed(2);
     pp18 = (burger$);
     price19.innerHTML = "";
     pp19 = 0;
     price20.innerHTML = "";
     pp20 = 0;
   } else if (radio2.checked == true) {
-    price19.innerHTML = "$" + parseFloat(jrburger$).toFixed(2);
+    price19.innerHTML = "$" + (jrburger$).toFixed(2);
     pp19 = (jrburger$);
     price18.innerHTML = "";
     pp18 = 0;
     price20.innerHTML = "";
     pp20 = 0;
   } else if (radio3.checked == true) {
-    price20.innerHTML = "$" + parseFloat(wrap$).toFixed(2);
+    price20.innerHTML = "$" + (wrap$).toFixed(2);
     pp20 = (wrap$);
     price18.innerHTML = "";
     pp18 = 0;
@@ -190,7 +188,7 @@ var countBase = 0;
 
 function mybase() {
   if (radio4.checked == true) {
-    price21.innerHTML = "$" + parseFloat(chi$).toFixed(2);
+    price21.innerHTML = "$" + (chi$).toFixed(2);
     pp21 = (chi$);
     price22.innerHTML = "";
     pp22 = 0;
@@ -199,7 +197,7 @@ function mybase() {
     price24.innerHTML = "";
     pp24 = 0;
   } else if (radio5.checked == true) {
-    price22.innerHTML = "$" + parseFloat(mea$).toFixed(2);
+    price22.innerHTML = "$" + (mea$).toFixed(2);
     pp22 = (mea$);
     price21.innerHTML = "";
     pp21 = 0;
@@ -208,7 +206,7 @@ function mybase() {
     price24.innerHTML = "";
     pp24 = 0;
   } else if (radio6.checked == true) {
-    price23.innerHTML = "$" + parseFloat(fal$).toFixed(2);
+    price23.innerHTML = "$" + (fal$).toFixed(2);
     pp23 = (fal$);
     price21.innerHTML = "";
     pp21 = 0;
@@ -217,7 +215,7 @@ function mybase() {
     price24.innerHTML = "";
     pp24 = 0;
   } else if (radio7.checked == true) {
-    price24.innerHTML = "$" + parseFloat(tof$).toFixed(2);
+    price24.innerHTML = "$" + (tof$).toFixed(2);
     pp24 = (tof$);
     price21.innerHTML = "";
     pp21 = 0;
@@ -243,7 +241,7 @@ var countsauce = 0;
 
 function mayoT() {
   if (checkBox1.checked == true) {
-    price13.innerHTML = "$" + parseFloat(sauce$).toFixed(2);
+    price13.innerHTML = "$" + (sauce$).toFixed(2);
     pp13 = (sauce$);
   } else {
     price13.innerHTML = "";
@@ -261,7 +259,7 @@ var pp14 = 0;
 
 function aioliT() {
   if (checkBox2.checked == true) {
-    price14.innerHTML = "$" + parseFloat(sauce$).toFixed(2);
+    price14.innerHTML = "$" + (sauce$).toFixed(2);
     pp14 = (sauce$);
   } else {
     price14.innerHTML = "";
@@ -279,7 +277,7 @@ var pp15 = 0;
 
 function curryT() {
   if (checkBox3.checked == true) {
-    price15.innerHTML = "$" + parseFloat(sauce$).toFixed(2);
+    price15.innerHTML = "$" + (sauce$).toFixed(2);
     pp15 = (sauce$);
   } else {
     price15.innerHTML = "";
@@ -297,7 +295,7 @@ var pp16 = 0;
 
 function hotcT() {
   if (checkBox4.checked == true) {
-    price16.innerHTML = "$" + parseFloat(sauce$).toFixed(2);
+    price16.innerHTML = "$" + (sauce$).toFixed(2);
     pp16 = (sauce$);
   } else {
     price16.innerHTML = "";
@@ -315,7 +313,7 @@ var pp17 = 0;
 
 function itaT() {
   if (checkBox5.checked == true) {
-    price17.innerHTML = "$" + parseFloat(sauce$).toFixed(2);
+    price17.innerHTML = "$" + (sauce$).toFixed(2);
     pp17 = (sauce$);
   } else {
     price17.innerHTML = "";
@@ -338,8 +336,8 @@ output1.innerHTML = slider1.value; // Display the default slider value
 slider1.oninput = function () {
   output1.innerHTML = this.value;
   if (this.value > 0) {
-    price1.innerHTML = "$" + parseFloat((this.value * 1.5 - .5).toFixed(2));
-    pp1 = parseFloat(this.value * 1.5 - .5).toFixed(2);
+    price1.innerHTML = "$" + (this.value * 1.5 - .5).toFixed(2);
+    pp1 = this.value * 1.5 - .5.toFixed(2);
   } else {
     price1.innerHTML = "";
     pp1 = 0
@@ -359,7 +357,7 @@ output2.innerHTML = slider2.value;
 slider2.oninput = function () {
   output2.innerHTML = this.value;
   if (this.value > 0) {
-    price2.innerHTML = "$" + parseFloat(this.value * 1.5 - .5).toFixed(2);
+    price2.innerHTML = "$" + (this.value * 1.5 - .5).toFixed(2);
     pp2 = this.value * 1.5 - .5.toFixed(2);
   } else {
     price2.innerHTML = "";
@@ -380,7 +378,7 @@ output3.innerHTML = slider3.value;
 slider3.oninput = function () {
   output3.innerHTML = this.value;
   if (this.value > 0) {
-    price3.innerHTML = "$" + parseFloat(this.value * 1.5 - .5).toFixed(2);
+    price3.innerHTML = "$" + (this.value * 1.5 - .5).toFixed(2);
     pp3 = this.value * 1.5 - .5.toFixed(2);
   } else {
     price3.innerHTML = "";
@@ -401,7 +399,7 @@ output4.innerHTML = slider4.value;
 slider4.oninput = function () {
   output4.innerHTML = this.value;
   if (this.value > 0) {
-    price4.innerHTML = "$" + parseFloat(this.value * 1.5 - .5).toFixed(2);
+    price4.innerHTML = "$" + (this.value * 1.5 - .5).toFixed(2);
     pp4 = this.value * 1.5 - .5.toFixed(2);
   } else {
     price4.innerHTML = "";
@@ -430,7 +428,7 @@ output5.innerHTML = slider5.value;
 slider5.oninput = function () {
   output5.innerHTML = this.value;
   if (this.value == 1) {
-    price5.innerHTML = "$" + parseFloat((-.1 * this.value) + 0.6).toFixed(2);
+    price5.innerHTML = "$" + ((-.1 * this.value) + 0.6).toFixed(2);
     pp5 = ((-.1 * this.value) + 0.6).toFixed(2);
   } else if (this.value == 2) {
     price5.innerHTML = "$" + (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6))).toFixed(2);
