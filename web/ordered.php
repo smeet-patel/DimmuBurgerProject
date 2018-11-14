@@ -218,11 +218,11 @@
         // ready state 4 means request is made and ready
 
             var str = document.getElementById("orNum").innerHTML;
-            var stored = str;
+            //var stored = str;
             // Local session storage
-            if (typeof(Storage) !== "undefined") { 
-                localStorage.setItem("orderNumber", stored); var str = localStorage.getItem("orderNumber"); 
-            }
+            // if (typeof(Storage) !== "undefined") { 
+            //     localStorage.setItem("orderNumber", stored); var str = localStorage.getItem("orderNumber"); 
+            // }
             
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
