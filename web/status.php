@@ -29,7 +29,7 @@
     $stmt4 = 'select orderstate as orderstate from orders WHERE ordernumber = :ordernumber';
     
     $update = $conn -> prepare($stmt4);
-    $update -> bindValue(':ordernumber', $onum);
+    $update -> bindParam(':ordernumber', $onum);
 
     while($row = $update->fetch(PDO::FETCH_ASSOC)){
         $stats = $row['orderstate'];
