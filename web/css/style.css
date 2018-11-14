@@ -348,7 +348,7 @@ th {
 }
 
 input[type=submit] {
-    width: 100%;
+    width: 300px;
     background-color: #010E1E;
     color: white;
     font-size: 1.5em;
@@ -357,7 +357,7 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
+ }
 
 .btnSub1 {
     /* background-color: red; */
@@ -434,7 +434,7 @@ input[type=submit] {
 }
 
 label {
-    margin-top: 12px;
+    margin-top: 16px;
 }
 
 /* On mouse-over, add a grey background color */
@@ -503,7 +503,7 @@ label {
     position: absolute;
     left: 0;
     top: calc(5px + 1.5vw);
-    top: 5px;
+    top: -2px;
     border-radius: 10px;
     height: 25px;
     width: 25px;
@@ -576,7 +576,7 @@ label {
     cursor: pointer;
 }
 
-.loginInput { /* Input text fields for login page */
+.loginInput {
     border: none;
     border-bottom: 1px solid #CCCCCC;
     background-color: white;
@@ -584,7 +584,7 @@ label {
     margin-bottom: 10px;
     outline: none;
     padding: 10px;
-    width: 400px;
-  }
+    width: 300px;
+ }
 
 /* ------------------------------------*/
