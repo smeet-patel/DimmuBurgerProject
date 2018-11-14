@@ -218,7 +218,7 @@
 		<div id="mid" style="height: auto; padding-bottom: 50px">
             <h1 id="bread" style="padding-bottom: 0.5em;">ORDER STATUS:</h1>
             <div class="container">
-                <p style="font-size: 1.2em; line-height: 1.6em"><span id="output" style="font-weight:bold"></span></p>
+                <p style="font-size: 1.2em; line-height: 1.6em"><span id="output"></span></p>
             </div>            
         
 	    </div>
