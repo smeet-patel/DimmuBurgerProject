@@ -1,3 +1,5 @@
 <?php
 // Get Query String
-$q = "This is some PHP";
+$status = "This is some PHP";
+
+echo $status;
