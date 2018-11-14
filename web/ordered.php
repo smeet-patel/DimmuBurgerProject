@@ -201,22 +201,9 @@
             ?>
 
             <h4 style="font-family: mathison">Your order status is:</h4>
-            <form action="ordered.php" method="post">
+            <form action="status.php" method="post">
                 <input type="submit" value=" Submit " name="status"/><br />
             </form>            
-
-            <?php 
-            
-                 If(isset($_POST['status'])){
-                    $stmt4 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
-
-                    while($row = $stmt4->fetch(PDO::FETCH_ASSOC)){
-                        echo '<p>Your order status is <b>' . $row['orderstatus'] . '</b></p>';
-                    }
-                 }
-
-                $conn = null;
-            ?>
 	    </div>
 	</div>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
