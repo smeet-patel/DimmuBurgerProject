@@ -397,7 +397,7 @@
 						</tr>
 						<tr id="Hov">
 							<td width="15%">
-								<div class="cen"><img src="ingredients_icons/extras/pickel.png" class="icon"></div>
+								<div class="cen"><img src="ingredients_icons/produce/pickel.png" class="icon"></div>
 							</td>
 							<td width="30%">
 								<div class="cen">
@@ -531,9 +531,7 @@
 							<td>
 								<!-- <input type="radio" name="1" value="1" id="radio1" style="display: none"> -->
 								<div class="cen"><input type="submit" class="btnSub" name="newburger" value="Proceed with order"
-									style=" color: crimson;font-size: calc(12px + 1.5vw);margin: 5px;padding: 0.2em;cursor: pointer;border-color: 
-									crimson;background-color:transparent;border-radius: 5px;" onMouseOver="this.style.color='white'"
-									onMouseOut="this.style.color='crimson'"onclick="finalsubmit()" /></div>
+									onclick="finalsubmit()"/></div>
 								<!-- <div class="cen"><button class="btnSub" id="Another">Order Another Burger</button></div> -->
 							</td>
 						</tr>
