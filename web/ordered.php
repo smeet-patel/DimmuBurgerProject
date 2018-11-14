@@ -161,16 +161,17 @@
 
                 while($row = $stmt2->fetch(PDO::FETCH_ASSOC)){
                     echo '<p>Order: ' . $row['ordernumber'] . '<p><br>';
-                    $ordernumber = $row['ordernumber'];
-                    $burgernumber = $row['ordernumber'];
                 }
-                $orderstate = "new";
 
                 $stmt3 = $conn->prepare("INSERT INTO orders (ordernumber, burgernumber, orderstate)
                 VALUES (:ordernumber, :burgernumber, :orderstate)");
                 $stmt3->bindParam(':ordernumber', $ordernumber);
                 $stmt3->bindParam(':burgernumber', $burgernumber);
                 $stmt3->bindParam(':orderstate', $orderstate);
+
+                $orderstate = 'new';
+                $burgernumber = '3';
+                $ordernumber = '3';
             
                 $stmt3->execute();
                 echo 'New order created successfully ';   
