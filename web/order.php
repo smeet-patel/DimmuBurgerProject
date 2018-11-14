@@ -530,7 +530,7 @@
 						<tr>
 							<td>
 								<div class="cen">
-									<input type="email" class="loginInput" name="Email" placeholder="Email" />
+									<input type="email" class="loginInput" name="Email" placeholder="Email" required/>
 								</div>
 							</td>
 						</tr>
