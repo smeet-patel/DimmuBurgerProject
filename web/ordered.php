@@ -155,7 +155,7 @@
 
 <script>
 
-    var intervalID = window.setInterval(showSuggestion, 5000);
+    var intervalID = window.setInterval(showSuggestion, 2000);
 
     // function myCallback() {
     //     console.log("hellw");
@@ -215,10 +215,10 @@
 	<!-- Primary Page Layout
 			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<div class="containerWork">
-		<div id="mid">
+		<div id="mid" style="height: auto; padding-bottom: 50px">
             <h1 id="bread" style="padding-bottom: 0.5em;">ORDER STATUS:</h1>
             <div class="container">
-                <p>Suggestions: <span id="output" style="font-weight:bold"></span></p>
+                <p style="font-size: 1.2em; line-height: 1.6em"><span id="output" style="font-weight:bold"></span></p>
             </div>            
         
 	    </div>

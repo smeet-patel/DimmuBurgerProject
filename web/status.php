@@ -13,8 +13,6 @@
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
-
-
     $stmt3 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
 
     $stats = 0;
@@ -23,8 +21,6 @@
     while($row = $stmt3->fetch(PDO::FETCH_ASSOC)){
         $onum = $row['ordernumber'];
     }
-
-
 
     $sql = 'select * from orders WHERE ordernumber = :ordernumber';
     
