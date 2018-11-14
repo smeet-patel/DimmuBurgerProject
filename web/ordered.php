@@ -105,6 +105,35 @@
 
 
         $stmt->execute();     
+
+
+        $ordernumber = '1';
+        $burger = '2';
+        $orderstate = 'new';
+
+        $sql = 'INSERT INTO orders(ordernumber, burger, orderstate) VALUES(:ordernumber, :burger, :orderstate)';
+        $stmtA = $conn->prepare($sql);
+        $stmtA->execute(['ordernumber' => $ordernumber, 'burger' => $burgernumber, 'author' => $orderstate]);
+        echo 'Order Added';        
+
+        // $stmt3 = $conn->prepare("INSERT INTO orders (ordernumber, burgernumber, orderstate)
+        // VALUES (:ordernumber, :burgernumber, :orderstate)");
+        // $stmt3->bindParam(':ordernumber', $ordernumber);
+        // $stmt3->bindParam(':burgernumber', $burgernumber);
+        // $stmt3->bindParam(':orderstate', $orderstate);
+
+        // $orderstate = 'new';
+        // $burgernumber = '3';
+        // $ordernumber = '3';
+    
+        // $stmt3->execute();
+        // echo 'New order created successfully ';   
+
+        // $stmt4 = $conn->query('SELECT * FROM orders');
+        // while($row = $stmt4->fetch()){
+        //     echo $row->ordernumber . '<br/>';
+        // }    
+
             
 
     }catch(PDOException $e){
@@ -162,24 +191,6 @@
                 while($row = $stmt2->fetch(PDO::FETCH_ASSOC)){
                     echo '<p>Order: ' . $row['ordernumber'] . '<p><br>';
                 }
-
-                $stmt3 = $conn->prepare("INSERT INTO orders (ordernumber, burgernumber, orderstate)
-                VALUES (:ordernumber, :burgernumber, :orderstate)");
-                $stmt3->bindParam(':ordernumber', $ordernumber);
-                $stmt3->bindParam(':burgernumber', $burgernumber);
-                $stmt3->bindParam(':orderstate', $orderstate);
-
-                $orderstate = 'new';
-                $burgernumber = '3';
-                $ordernumber = '3';
-            
-                $stmt3->execute();
-                echo 'New order created successfully ';   
-
-                $stmt4 = $conn->query('SELECT * FROM orders');
-                while($row = $stmt4->fetch()){
-                    echo $row->ordernumber . '<br/>';
-                }    
 
                 $conn = null;
             ?>
