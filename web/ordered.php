@@ -199,15 +199,6 @@
                     echo '<p>Your order number is <b>' . $row['ordernumber'] . '</b></p>';
                 }
 
-                $order = '0';
-                echo $order;
-
-                $sql = 'SELECT * FROM orders WHERE orderstate = :orderstate';
-                $stmt4 = $conn->prepare($sql);
-                $stmt4->execute(['orderstate' => $orderstate]);
-                $order =  $stmt4->fetch();
-
-                echo 'State is: ' . $order;
 
 
             ?>
@@ -218,7 +209,9 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<!-- <script src='javascript/bootstrap.min.js'></script> -->
 	<script src='javascript/jquery.min.js'></script>
-	<script src="javascript/script.js"></script>
+    <script src="javascript/script.js" defer></script>
+    <script src="javascript/script1.js" defer></script>
+    <script src="javascript/script2.js" defer></script>
 </body>
 
 </html>

@@ -93,20 +93,6 @@ body {
     margin: auto;
 }
 
-#midindex {
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    position: relative;
-    border-radius: 10px;
-    padding: 20px;
-    padding-right: 20px;
-    margin: auto;
-}
-
 div.sticky {
     position: -webkit-sticky;
     position: sticky;
@@ -197,6 +183,47 @@ h1 {
 }
 
 /* ------------ NAV BAR CODE ENDS ------------ */
+
+
+
+.btn {
+    background-color: crimson;
+    margin: 5px;
+    width: 75px;
+    color: white;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.btn:focus {
+    color: white;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.btnSub {
+    /* background-color: red; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: crimson;
+    border-color: crimson;
+    font-size: 1.4em;
+    padding: 5px;
+    margin: 5px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    /* width: 50%; */
+    /* color: white; */
+}
+
 
 /* ------------ Table ------------ */
 
@@ -347,6 +374,19 @@ th {
     bottom: 0;
 }
 
+.btnSub {
+    /* background-color: red; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #010E1E;
+    border-color: #010E1E;
+    font-size: 1.8em;
+    margin: 5px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    /* color: white; */
+}
+
 input[type=submit] {
     width: 100%;
     background-color: #010E1E;
@@ -372,31 +412,8 @@ input[type=submit] {
     /* color: white; */
 }
 
-.btnSub {
-    /* background-color: red; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: crimson;
-    border-color:  rgb(206, 5, 48);
-    font-size: 1.5em;
-    margin: 5px;
-    padding: 1vw;
-    background: transparent;
-    border-radius: 10px;
-    /* width: 50%; */
-    /* color: white; */
-}
-
 .btnSub:hover {
     color: white;
-}
-
-.cenBanner {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 1200px;
-    border-radius: 10px;
 }
 
 /* ------------ NAV BAR CODE ENDS ------------ */

@@ -35,15 +35,43 @@
 	<br>
 	<!-- Primary Page Layout
 			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<!-- </div> -->
-	<div class="containerWork">
-		<div id="mid" style="background-color: #B6D1D3">
-			<h1 class="headTitle">Delicious Burgers
-                <br/>Made How You Want
-            </h1>
+			<div class="containerWork">
+        <div id="mid" style="background-color: #B6D1D3">
+            
+			<img src="images/Order.png" class="cenBanner" style="border-radius: 10px;">
 
 	    </div>
 	</div>
+    <div class="container1">
+        <div id="midindex" class="cenBanner">
+          <div class="row">
+            <div class="twelve columns">
+              <table>
+                <tr>
+                  <td width="50%">
+                    <div class="cen"><button class="btnSub" id="Order" width="300px" onclick="location.href='http://www.google.com'">Order
+                        NOW</button></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <div class="cen"><button class="btnSub" id="Order" width="300px" onclick="location.href='http://www.example.com'">Check
+                        your order</button></div>
+                  </td>
+                </tr>
+              </table>
+              <p style="font-size: 20px; color: crimson;">Create your personalised burger with a range of fresh and premium
+                New Zealand ingredients
+                for the best-personalised experience with Dimmu Burgers Create your range. Dimmu is named after Norwegian
+                rock band.
+              </p>
+              <!-- <h1>Dimmu Burger</h1>
+              <p>Connectivity Testing Page</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<!-- <script src='javascript/bootstrap.min.js'></script> -->
