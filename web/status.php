@@ -17,7 +17,7 @@
 
     $stmt3 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
 
-    $post = "a";
+    $stats = "";
     $onum = "";
 
     while($row = $stmt3->fetch(PDO::FETCH_ASSOC)){
@@ -25,13 +25,11 @@
     }
 
 
-    // $stmt4 = $conn->query('SELECT orderstate AS orderstate FROM orders WHERE (ordernumber = :ordernumber)');
-    $sql = 'SELECT orderstate FROM orders WHERE ordernumber = ?';
-    $stmt4 = $pdo->prepare($sql);
-    $stmt4->execute([$onum]);
-    $posts = $stmt4->fetchAll();
+    $sql = 'SELECT * FROM orders WHERE orderstate = :orderstate';
+    $stmt = $conn->prepare($sql);
+    $stmt->execute(['ordernumber' => $onum]);
+    $post = $stmt->fetch();
+    echo $post->orderstate;
 
 
-
-    echo $posts;
 ?>
