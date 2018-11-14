@@ -53,8 +53,8 @@
 							</td>
 						</tr>
 					</table>
-					<p>Create your personalised burger with a range of fresh, premium New Zealand ingredients.
-						Dimmu Burger is a play on words, referencing Norwegian black metal band Dimmu Borgir.<br>
+					<p style="font-size: 1.2em">Create your personalised burger with a range of fresh, premium New Zealand ingredients.
+						<br/>Dimmu Burger is a play on words, referencing Norwegian black metal band Dimmu Borgir.<br>
 						Dimmu Burger – “There’s a bit of black metal in every bite!”<br>
 					</p>
 					<!-- <h1>Dimmu Burger</h1>
