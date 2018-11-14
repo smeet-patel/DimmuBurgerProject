@@ -13,14 +13,25 @@
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
-    //$stmt3 = $conn->query('select count(*) from orders where burgerstate like \'new\'');
 
-    $stat = "";
 
-    $q = $conn->prepare("SELECT COUNT(id) as records FROM orders WHERE orderstate LIKE 'new'");
-    $q->execute(array($orderstate)); 
+    $stmt3 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
 
-    $stat = (int) ($q->rowCount()) ? $q->fetch(PDO::FETCH_OBJ)->records : 0;
+    $post = "a";
+    $onum = "";
 
-    echo $stat;
+    while($row = $stmt3->fetch(PDO::FETCH_ASSOC)){
+        $onum = $row['ordernumber'];
+    }
+
+
+    // $stmt4 = $conn->query('SELECT orderstate AS orderstate FROM orders WHERE (ordernumber = :ordernumber)');
+    $sql = 'SELECT orderstate FROM orders WHERE ordernumber = ?';
+    $stmt4 = $pdo->prepare($sql);
+    $stmt4->execute([$onum]);
+    $posts = $stmt4->fetchAll();
+
+
+
+    echo $posts;
 ?>
