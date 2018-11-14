@@ -155,13 +155,13 @@
 
     <script>
 
-    // var intervalID = window.setInterval(myCallback, 5000);
+    var intervalID = window.setInterval(showSuggestion, 5000);
 
     // function myCallback() {
     //     console.log("hellw");
     // }
 
-    function showSuggestion(str){
+    function showSuggestion(){
         if(str.length == 0){
             document.getElementById('output').innerHTML = '';
         } else {
@@ -175,7 +175,7 @@
                     document.getElementById('output').innerHTML = this.responseText;
                 }
             };
-            xmlhttp.open("GET", "status.php?+q=" + str, true);
+            xmlhttp.open("GET", "status.php?+q=", true);
             xmlhttp.send();                
         }
     }
@@ -222,10 +222,6 @@
 		<div id="mid">
             <h1 id="bread" style="padding-bottom: 0.5em;">ORDER STATUS:</h1>
             <div class="container">
-                <h1>Search users</h1>
-                <form>
-                    Search User: <input type="text" class="form-control" onkeyup="showSuggestion(this.value)"></input>
-                </form>
                 <p>Suggestions: <span id="output" style="font-weight:bold"></span></p>
             </div>            
 
