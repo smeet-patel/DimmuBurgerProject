@@ -199,13 +199,15 @@
                     echo '<p>Your order number is <b>' . $row['ordernumber'] . '</b></p>';
                 }
 
-                $orderstate = '0';
-                echo $orderstate;
+                $order = '0';
+                echo $order;
 
                 $sql = 'SELECT * FROM orders WHERE orderstate = :orderstate';
-                $stmt4 = $pdo->prepare($sql);
+                $stmt4 = $conn->prepare($sql);
                 $stmt4->execute(['orderstate' => $orderstate]);
-                echo $stmt4->fetch();
+                $order =  $stmt4->fetch();
+
+                echo 'State is: ' . $order;
 
 
             ?>
