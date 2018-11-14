@@ -197,11 +197,20 @@
 
                 while($row = $stmt3->fetch(PDO::FETCH_ASSOC)){
                     echo '<p>Your order number is <b>' . $row['ordernumber'] . '</b></p>';
-                    echo '<p>Your order status is <b>' . $row['orderstatus'] . '</b></p>';
                 }
+
+                $orderstate = '0';
+
+                $sql = 'SELECT * FROM orders WHERE orderstate = :orderstate';
+                $stmt4 = $pdo->prepare($sql);
+                $stmt4->execute(['orderstate' => $orderstate]);
+                $post = $stmt4->fetch();
+
+                echo 'Order State: ' . $post;
 
             ?>
         
+
 	    </div>
 	</div>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
