@@ -24,7 +24,7 @@
         $onum = $row['ordernumber'];
     }
 
-    $stmt4 = $conn->query('select orderstate as orderstate from orders WHERE ordernumber = 75');
+    $stmt4 = $conn->query('select orderstate as orderstate from orders WHERE ordernumber = $onum');
     
     while($row = $stmt4->fetch(PDO::FETCH_ASSOC)){
         $stats = $row['orderstate'];
