@@ -162,22 +162,18 @@
     // }
 
     function showSuggestion(){
-        if(str.length == 0){
-            document.getElementById('output').innerHTML = '';
-        } else {
-            // AJAX REQUEST
-            // create http object to create get request on certain page
-            // status 200 means everything is ok.
-            // ready state 4 means request is made and ready
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById('output').innerHTML = this.responseText;
-                }
-            };
-            xmlhttp.open("GET", "status.php?+q=", true);
-            xmlhttp.send();                
-        }
+        // AJAX REQUEST
+        // create http object to create get request on certain page
+        // status 200 means everything is ok.
+        // ready state 4 means request is made and ready
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById('output').innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "status.php?+q=", true);
+        xmlhttp.send();                
     }
 </script>  
 
