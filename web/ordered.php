@@ -197,13 +197,11 @@
 
                 while($row = $stmt3->fetch(PDO::FETCH_ASSOC)){
                     echo '<p>Your order number is <b>' . $row['ordernumber'] . '</b></p>';
+                    echo '<p>Your order status is <b>' . $row['orderstatus'] . '</b></p>';
                 }
-            ?>
 
-            <h4 style="font-family: mathison">Your order status is:</h4>
-            <form action="status.php" method="post">
-                <input type="submit" value=" Submit " name="status"/><br />
-            </form>            
+            ?>
+        
 	    </div>
 	</div>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
