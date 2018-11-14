@@ -153,6 +153,34 @@
 
 ?>
 
+    <script>
+
+    // var intervalID = window.setInterval(myCallback, 5000);
+
+    // function myCallback() {
+    //     console.log("hellw");
+    // }
+
+    function showSuggestion(str){
+        if(str.length == 0){
+            document.getElementById('output').innerHTML = '';
+        } else {
+            // AJAX REQUEST
+            // create http object to create get request on certain page
+            // status 200 means everything is ok.
+            // ready state 4 means request is made and ready
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById('output').innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "status.php?+q=" + str, true);
+            xmlhttp.send();                
+        }
+    }
+</script>  
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -192,7 +220,15 @@
 			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<div class="containerWork">
 		<div id="mid">
-			<h1 id="bread" style="padding-bottom: 0.5em;">ORDER STATUS:</h1>
+            <h1 id="bread" style="padding-bottom: 0.5em;">ORDER STATUS:</h1>
+            <div class="container">
+                <h1>Search users</h1>
+                <form>
+                    Search User: <input type="text" class="form-control" onkeyup="showSuggestion(this.value)"></input>
+                </form>
+                <p>Suggestions: <span id="output" style="font-weight:bold"></span></p>
+            </div>            
+
             <?php
                 $stmt3 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
 
