@@ -1,3 +1,5 @@
+$("[name='Email']").prop("required", true);
+
 var sauce$ = .2;
 var jrburger$ = 2.5;
 var wrap$ = 3;
