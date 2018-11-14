@@ -615,7 +615,6 @@ output12.innerHTML = slider12.value;
 slider12.oninput = function () {
   output12.innerHTML = this.value;
   if (this.value == 1) {
-    vegecheck();
     price12.innerHTML = "$" + parseFloat((-.1 * this.value) + 0.6).toFixed(2);
     pp12 = parseFloat((-.1 * this.value) + 0.6).toFixed(2);
   } else if (this.value == 2) {
@@ -635,7 +634,9 @@ slider12.oninput = function () {
 }
 
 function vegecheck() {
-  saucesdisplay();
+  if (pp5 > 0 || pp6 > 0 || pp7 > 0 || pp8 > 0 || pp9 > 0 || pp10 > 0 || pp11 > 0 || pp12 > 0) {
+    saucesdisplay();
+  }
 }
 var totalid = document.getElementById("totalPrice");
 
