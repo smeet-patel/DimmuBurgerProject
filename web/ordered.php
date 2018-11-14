@@ -153,7 +153,7 @@
 
 ?>
 
-    <script>
+<script>
 
     var intervalID = window.setInterval(showSuggestion, 5000);
 
@@ -220,18 +220,10 @@
             <div class="container">
                 <p>Suggestions: <span id="output" style="font-weight:bold"></span></p>
             </div>            
-
-            <?php
-                $stmt3 = $conn->query('SELECT MAX(ordernumber) AS ordernumber FROM orders');
-
-                while($row = $stmt3->fetch(PDO::FETCH_ASSOC)){
-                    echo '<p>Your order number is <b>' . $row['ordernumber'] . '</b></p>';
-                }
-            ?>
         
 	    </div>
     </div>
-    <script src="javascript/script.js" defer></script>
+    <script src="javascript/script.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<!-- <script src='javascript/bootstrap.min.js'></script> -->
 	<script src='javascript/jquery.min.js'></script>
