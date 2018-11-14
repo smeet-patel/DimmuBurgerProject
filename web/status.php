@@ -13,13 +13,13 @@
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
-    $stmt3 = $conn->query('select count(*) from orders where burgerstate like \'new\'');
+    //$stmt3 = $conn->query('select count(*) from orders where burgerstate like \'new\'');
 
     $stat = "";
 
-    while($row = $stmt3->fetch(PDO::FETCH_ASSOC)){
-        $stat = 'Your order number is <b>' . $row['ordernumber'];
-    }
+    $stmt3 = $conn->prepare("SELECT count(*) FROM orders WHERE burgerstate like 'new'");
+    $stmt3->execute([$burgerstate]);
+    $count = $stmt3->fetchColumn();
 
     echo $stat;
 ?>
