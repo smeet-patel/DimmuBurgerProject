@@ -231,8 +231,6 @@ function mybase() {
   cheesedisplay();
 }
 
-
-
 var checkBox1 = document.getElementById("mayo");
 var price13 = document.getElementById("pmayo");
 var pp13 = 0;
@@ -637,9 +635,7 @@ slider12.oninput = function () {
 }
 
 function vegecheck() {
-  if (pp5 > 0 || pp6 > 0 || pp7 > 0 || pp8 > 0 || pp9 > 0 || pp10 > 0 || pp11 > 0 || pp12 > 0) {
     saucesdisplay();
-  }
 }
 var totalid = document.getElementById("totalPrice");
 
