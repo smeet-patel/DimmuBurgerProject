@@ -24,13 +24,13 @@
         $onum = $row['ordernumber'];
     }
 
-    $stmt4->bindParam(':ordernumber', $onum);
-    $stmt4 = $conn->query('select orderstate as orderstate from orders WHERE ordernumber = :ordernumber');
+    // $stmt4->bindParam(':ordernumber', $onum);
+    // $stmt4 = $conn->query('select orderstate as orderstate from orders WHERE ordernumber = :ordernumber');
     
-    while($row = $stmt4->fetch(PDO::FETCH_ASSOC)){
-        $stats = $row['orderstate'];
-    }
+    // while($row = $stmt4->fetch(PDO::FETCH_ASSOC)){
+    //     $stats = $row['orderstate'];
+    // }
 
-    echo "Status: " . $stats . "<br/>Order Number " . $onum; 
+    echo $onum; 
 
 ?>
