@@ -1,7 +1,3 @@
 <?php
 // Get Query String
-$q = $_REQUEST['q'];
-
-$suggestion = "";
-
-echo $suggestion === "Nothing much";
+$q = "This is some PHP";
