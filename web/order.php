@@ -553,6 +553,7 @@
 	<!-- <script src='javascript/bootstrap.min.js'></script> -->
 	<script src='javascript/jquery.min.js'></script>
 	<script src="javascript/script.js"></script>
+	<script src="javascript/jquery-latest.min.js"></script>
 </body>
 
 </html>
