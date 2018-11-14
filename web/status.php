@@ -17,7 +17,7 @@
 
     $stat = "";
 
-    $q = $dbc->prepare("SELECT COUNT(id) as records FROM orders WHERE orderstate LIKE 'new'");
+    $q = $conn->prepare("SELECT COUNT(id) as records FROM orders WHERE orderstate LIKE 'new'");
     $q->execute(array($orderstate)); 
 
     $stat = (int) ($q->rowCount()) ? $q->fetch(PDO::FETCH_OBJ)->records : 0;
