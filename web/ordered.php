@@ -117,11 +117,12 @@
 
         $ordernumber = $tem;
         $suborder = $tem;
+        $burger = $tem;
         $orderstate = 'new';
 
-        $sql = 'INSERT INTO orders(ordernumber, subordernumber, orderstate) VALUES(:ordernumber, :subordernumber, :orderstate)';
+        $sql = 'INSERT INTO orders(ordernumber, subordernumber, burger, orderstate) VALUES(:ordernumber, :subordernumber, :burger, :orderstate)';
         $stmtA = $conn->prepare($sql);
-        $stmtA->execute(['ordernumber' => $ordernumber, 'subordernumber' => $suborder, 'orderstate' => $orderstate]);
+        $stmtA->execute(['ordernumber' => $ordernumber, 'subordernumber' => $suborder, 'burger' => $burger, 'orderstate' => $orderstate]);
         // echo 'Order Added';        
 
         // $stmt3 = $conn->prepare("INSERT INTO orders (ordernumber, burgernumber, orderstate)
