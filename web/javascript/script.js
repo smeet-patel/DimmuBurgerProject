@@ -239,7 +239,8 @@ var countsauce = 0;
 
 function mayoT() {
   if (checkBox1.checked == true) {
-    price13.innerHTML = "$" + (sauce$).toFixed(2);
+    subsdisplay();
+    price13.innerHTML = "$" + parseFloat(sauce$).toFixed(2);
     pp13 = (sauce$);
   } else {
     price13.innerHTML = "";
@@ -257,7 +258,8 @@ var pp14 = 0;
 
 function aioliT() {
   if (checkBox2.checked == true) {
-    price14.innerHTML = "$" + (sauce$).toFixed(2);
+    subsdisplay();
+    price14.innerHTML = "$" + parseFloat(sauce$).toFixed(2);
     pp14 = (sauce$);
   } else {
     price14.innerHTML = "";
@@ -275,7 +277,8 @@ var pp15 = 0;
 
 function curryT() {
   if (checkBox3.checked == true) {
-    price15.innerHTML = "$" + (sauce$).toFixed(2);
+    subsdisplay();
+    price15.innerHTML = "$" + parseFloat(sauce$).toFixed(2);
     pp15 = (sauce$);
   } else {
     price15.innerHTML = "";
@@ -293,7 +296,8 @@ var pp16 = 0;
 
 function hotcT() {
   if (checkBox4.checked == true) {
-    price16.innerHTML = "$" + (sauce$).toFixed(2);
+    subsdisplay();
+    price16.innerHTML = "$" + parseFloat(sauce$).toFixed(2);
     pp16 = (sauce$);
   } else {
     price16.innerHTML = "";
@@ -335,7 +339,7 @@ slider1.oninput = function () {
   output1.innerHTML = this.value;
   if (this.value > 0) {
     price1.innerHTML = "$" + (this.value * 1.5 - .5).toFixed(2);
-    pp1 = this.value * 1.5 - .5.toFixed(2);
+    pp1 = this.value * 1.5 - .5.toFixed(2);    
   } else {
     price1.innerHTML = "";
     pp1 = 0
@@ -426,8 +430,9 @@ output5.innerHTML = slider5.value;
 slider5.oninput = function () {
   output5.innerHTML = this.value;
   if (this.value == 1) {
-    price5.innerHTML = "$" + ((-.1 * this.value) + 0.6).toFixed(2);
-    pp5 = ((-.1 * this.value) + 0.6).toFixed(2);
+    saucesdisplay();
+    price5.innerHTML = "$" + parseFloat((-.1 * this.value) + 0.6).toFixed(2);
+    pp5 = parseFloat((-.1 * this.value) + 0.6).toFixed(2);
   } else if (this.value == 2) {
     price5.innerHTML = "$" + (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6))).toFixed(2);
     pp5 = (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6)));
@@ -453,8 +458,9 @@ output6.innerHTML = slider6.value;
 slider6.oninput = function () {
   output6.innerHTML = this.value;
   if (this.value == 1) {
-    price6.innerHTML = "$" + ((-.1 * this.value) + 0.6).toFixed(2);
-    pp6 = ((-.1 * this.value) + 0.6).toFixed(2);
+    saucesdisplay();
+    price6.innerHTML = "$" + parseFloat((-.1 * this.value) + 0.6).toFixed(2);
+    pp6 = parseFloat((-.1 * this.value) + 0.6).toFixed(2);
   } else if (this.value == 2) {
     price6.innerHTML = "$" + (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6))).toFixed(2);
     pp6 = (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6)));
@@ -480,8 +486,9 @@ output7.innerHTML = slider7.value;
 slider7.oninput = function () {
   output7.innerHTML = this.value;
   if (this.value == 1) {
-    price7.innerHTML = "$" + ((-.1 * this.value) + 0.6).toFixed(2);
-    pp7 = ((-.1 * this.value) + 0.6).toFixed(2);
+    saucesdisplay();
+    price7.innerHTML = "$" + parseFloat((-.1 * this.value) + 0.6).toFixed(2);
+    pp7 = parseFloat((-.1 * this.value) + 0.6).toFixed(2);
   } else if (this.value == 2) {
     price7.innerHTML = "$" + (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6))).toFixed(2);
     pp7 = (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6)));
@@ -507,8 +514,9 @@ output8.innerHTML = slider8.value;
 slider8.oninput = function () {
   output8.innerHTML = this.value;
   if (this.value == 1) {
-    price8.innerHTML = "$" + ((-.1 * this.value) + 0.6).toFixed(2);
-    pp8 = ((-.1 * this.value) + 0.6).toFixed(2);
+    saucesdisplay();
+    price8.innerHTML = "$" + parseFloat((-.1 * this.value) + 0.6).toFixed(2);
+    pp8 = parseFloat((-.1 * this.value) + 0.6).toFixed(2);
   } else if (this.value == 2) {
     price8.innerHTML = "$" + (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6))).toFixed(2);
     pp8 = (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6)));
@@ -534,8 +542,9 @@ output9.innerHTML = slider9.value;
 slider9.oninput = function () {
   output9.innerHTML = this.value;
   if (this.value == 1) {
-    price9.innerHTML = "$" + ((-.1 * this.value) + 0.6).toFixed(2);
-    pp9 = ((-.1 * this.value) + 0.6).toFixed(2);
+    saucesdisplay();
+    price9.innerHTML = "$" + parseFloat((-.1 * this.value) + 0.6).toFixed(2);
+    pp9 = parseFloat((-.1 * this.value) + 0.6).toFixed(2);
   } else if (this.value == 2) {
     price9.innerHTML = "$" + (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6))).toFixed(2);
     pp9 = (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6)));
@@ -561,8 +570,9 @@ output10.innerHTML = slider10.value;
 slider10.oninput = function () {
   output10.innerHTML = this.value;
   if (this.value == 1) {
-    price10.innerHTML = "$" + ((-.1 * this.value) + 0.6).toFixed(2);
-    pp10 = ((-.1 * this.value) + 0.6).toFixed(2);
+    saucesdisplay();
+    price10.innerHTML = "$" + parseFloat((-.1 * this.value) + 0.6).toFixed(2);
+    pp10 = parseFloat((-.1 * this.value) + 0.6).toFixed(2);
   } else if (this.value == 2) {
     price10.innerHTML = "$" + (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6))).toFixed(2);
     pp10 = (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6)));
@@ -588,8 +598,9 @@ output11.innerHTML = slider11.value;
 slider11.oninput = function () {
   output11.innerHTML = this.value;
   if (this.value == 1) {
-    price11.innerHTML = "$" + ((-.1 * this.value) + 0.6).toFixed(2);
-    pp11 = ((-.1 * this.value) + 0.6).toFixed(2);
+    saucesdisplay();
+    price11.innerHTML = "$" + parseFloat((-.1 * this.value) + 0.6).toFixed(2);
+    pp11 = parseFloat((-.1 * this.value) + 0.6).toFixed(2);
   } else if (this.value == 2) {
     price11.innerHTML = "$" + (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6))).toFixed(2);
     pp11 = (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6)));
