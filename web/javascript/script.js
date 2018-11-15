@@ -630,7 +630,7 @@ slider12.oninput = function () {
     price12.innerHTML = "$" + parseFloat((-.1 * this.value) + 0.6).toFixed(2);
     pp12 = parseFloat((-.1 * this.value) + 0.6).toFixed(2);
   } else if (this.value == 2) {
-    price12.innerHTML = "$" + (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6))).toFixed(2);
+    price12.innerHTML = "$" + ((-.1 * this.value) + 0.6) + parseFloat(((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6))).toFixed(2);
     pp12 = (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6)));
   } else if (this.value == 3) {
     price12.innerHTML = "$" + (((-.1 * this.value) + 0.6) + ((-.1 * (this.value - 1) + 0.6)) + ((-.1 * (this.value - 2) + 0.6))).toFixed(2);
